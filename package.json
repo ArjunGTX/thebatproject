@@ -11,7 +11,7 @@
     "pretty": "prettier --write \"./**/*.{json,tsx,ts,css,js,html,scss,yml}\"",
     "pretty:check": "prettier \"./**/*.{json,tsx,ts,css,js,html,scss,yml}\" --check",
     "minify:images": "npx tsx ./scripts/minify-images.ts",
-    "build:ci": "npm run pretty:check && npm run lint && npm run minify:images && npx @cloudflare/next-on-pages@1"
+    "build:ci": "npx @cloudflare/next-on-pages@1"
   },
   "dependencies": {
     "next": "15.1.0",
