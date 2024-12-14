@@ -46,9 +46,6 @@ devDependencies:
   eslint-plugin-security:
     specifier: ^3.0.1
     version: 3.0.1
-  eslint-plugin-tailwindcss:
-    specifier: ^3.17.5
-    version: 3.17.5(tailwindcss@3.4.16)
   postcss:
     specifier: ^8
     version: 8.4.49
@@ -1501,17 +1498,6 @@ packages:
     engines: {node: ^18.18.0 || ^20.9.0 || >=21.1.0}
     dependencies:
       safe-regex: 2.1.1
-    dev: true
-
-  /eslint-plugin-tailwindcss@3.17.5(tailwindcss@3.4.16):
-    resolution: {integrity: sha512-8Mi7p7dm+mO1dHgRHHFdPu4RDTBk69Cn4P0B40vRQR+MrguUpwmKwhZy1kqYe3Km8/4nb+cyrCF+5SodOEmaow==}
-    engines: {node: '>=18.12.0'}
-    peerDependencies:
-      tailwindcss: ^3.4.0
-    dependencies:
-      fast-glob: 3.3.2
-      postcss: 8.4.49
-      tailwindcss: 3.4.16
     dev: true
 
   /eslint-scope@8.2.0:
