@@ -1,5 +1,8 @@
 name: Run checks and deploy to GCP
 on:
+  push:
+    branches:
+      - master
   pull_request:
     branches:
       - master
@@ -19,3 +22,15 @@ jobs:
         run: npm ci
       - name: Build artifacts
         run: npm run build
+      - name: Build for production
+        if: github.event_name == 'push' && github.ref == 'refs/heads/master'
+        run: npm run build:prod
+      - name: Deploy application
+        if: github.event_name == 'push' && github.ref == 'refs/heads/master'
+        uses: cloudflare/pages-action@v1
+        with:
+          apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+          projectName: ${{ secrets.CLOUDFLARE_PROJECT_NAME }}
+          directory: .vercel/output/static
+          gitHubToken: ${{ secrets.GITHUB_TOKEN }}

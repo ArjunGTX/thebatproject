@@ -19,6 +19,7 @@
 
 # production
 /build
+/.vercel/output/static
 
 # misc
 .DS_Store
