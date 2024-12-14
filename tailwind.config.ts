@@ -7,12 +7,15 @@ export default {
     "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
   ],
   theme: {
+    fontFamily: {
+      montserrat: "var(--font-montserrat), sans-serif",
+    },
     extend: {
-      colors: {
-        background: "var(--background)",
-        foreground: "var(--foreground)",
-      },
+      colors: {},
     },
   },
   plugins: [],
+  corePlugins: {
+    preflight: false,
+  },
 } satisfies Config;
