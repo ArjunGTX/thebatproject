@@ -11,6 +11,21 @@ const compat = new FlatCompat({
 
 const eslintConfig = [
   ...compat.extends("next/core-web-vitals", "next/typescript"),
+  ...compat.extends("plugin:jsx-a11y/recommended"),
+  ...compat.extends("plugin:tailwindcss/recommended"),
+  ...compat.extends("plugin:import/recommended"),
+  {
+    rules: {
+      "linebreak-style": ["error", "unix"],
+      quotes: ["error", "double"],
+      curly: "error",
+      "require-await": "error",
+      "no-unreachable": "error",
+      "prefer-const": "error",
+      "prefer-template": "error",
+      "react/prop-types": "off", 
+    },
+  },
 ];
 
 export default eslintConfig;
