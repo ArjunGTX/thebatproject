@@ -1,0 +1,7 @@
+/node_modules
+/out
+/.next
+.dockerignore
+.gitignore
+Dockerfile
+/public/images
