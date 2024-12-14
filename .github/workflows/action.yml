@@ -22,11 +22,11 @@ jobs:
       - name: Build artifacts
         run: npm run build:ci
       - name: Deploy application
-        uses: cloudflare/pages-action@v1
+        uses: cloudflare/wrangler-action@v3
         if: github.event_name == 'push' && github.ref == 'refs/heads/master'
         with:
           apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
           accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
-          projectName: ${{ secrets.CLOUDFLARE_PROJECT_NAME }}
-          directory: .vercel/output/static
+          command: pages deploy .vercel/output/static --project-name=thebatproject
           gitHubToken: ${{ secrets.GITHUB_TOKEN }}
+          environment: production
