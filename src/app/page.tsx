@@ -1,5 +1,7 @@
 import Image from "next/image";
 
+export const runtime = "edge";
+
 export default function Home() {
   return (
     <main className="flex justify-center items-center gap-6 w-svw h-svh p-10">
