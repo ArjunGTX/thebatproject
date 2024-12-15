@@ -166,11 +166,11 @@ export const batLogoOptions: RecursivePartial<IOptions> = {
       options: {
         particles: {
           number: {
-            value: 240,
+            value: 150,
           },
         },
         polygon: {
-          scale: 0.4,
+          scale: 0.425,
         },
       },
     },
@@ -351,7 +351,19 @@ export const nightSkyOptions: RecursivePartial<IOptions> = {
   },
   pauseOnBlur: true,
   pauseOnOutsideViewport: true,
-  responsive: [],
+  responsive: [
+    {
+      maxWidth: 640,
+      mode: "screen",
+      options: {
+        particles: {
+          number: {
+            value: 80,
+          },
+        },
+      },
+    },
+  ],
   smooth: false,
   style: {},
   themes: [],
