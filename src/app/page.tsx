@@ -1,4 +1,12 @@
-import { HeroSection } from "./_components/HeroSection";
+import dynamic from "next/dynamic";
+
+const HeroSection = dynamic(
+  () =>
+    import("./_components/HeroSection").then((module) => module.HeroSection),
+  {
+    loading: () => <p>Loading...</p>,
+  },
+);
 
 export const runtime = "edge";
 
