@@ -25,9 +25,7 @@ export const HeroSection = () => {
           &ldquo;If I can&apos;t change things here, <br /> if I can&apos;t have
           an effect, <br />I don&apos;t care what happens to me.&rdquo;
         </p>
-        <Button variant="primary" className="w-52">
-          HIRE HIM
-        </Button>
+        <Button variant="primary">HIRE THE VIGILANTE</Button>
       </div>
       <BatLogo />
     </section>
