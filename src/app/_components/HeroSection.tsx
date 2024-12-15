@@ -1,6 +1,18 @@
 import React from "react";
-import { BatLogo } from "./BatLogo";
 import { Button } from "@/components/Button";
+import dynamic from "next/dynamic";
+import { HeroSectionLoader } from "./HeroSectionLoader";
+
+const BatLogo = dynamic(
+  () => import("./BatLogo").then((module) => module.BatLogo),
+  {
+    loading: () => (
+      <div className="w-full flex justify-center items-center">
+        <HeroSectionLoader />
+      </div>
+    ),
+  },
+);
 
 export const HeroSection = () => {
   return (

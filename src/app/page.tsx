@@ -1,17 +1,10 @@
 import dynamic from "next/dynamic";
-
-const HeroSection = dynamic(
-  () =>
-    import("./_components/HeroSection").then((module) => module.HeroSection),
-  {
-    loading: () => <p>Loading...</p>,
-  },
-);
+import { HeroSection } from "./_components/HeroSection";
 
 const NightSky = dynamic(
   () => import("./_components/NightSky").then((module) => module.NightSky),
   {
-    loading: () => <p>Loading...</p>,
+    loading: () => <></>,
   },
 );
 
