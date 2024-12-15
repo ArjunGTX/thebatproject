@@ -1,5 +1,5 @@
 import { Metadata, Viewport } from "next";
-import { Constants } from "./constants";
+import { Constants, ExternalLinks } from "./constants";
 
 export const getViewPort = () => {
   const viewport: Viewport = {
@@ -14,8 +14,12 @@ export const getMetaData = (options?: {
   description?: string;
   path?: string;
 }): Metadata => {
-  const title = options?.title ?? "The Bat Project";
-  const description = options?.description ?? "The Bat Project by Arjun";
+  const title =
+    options?.title ??
+    "Developer by day, Vigilante by night | Portfolio of a digital architect";
+  const description =
+    options?.description ??
+    "Step into the world of a masked developer who crafts elegant web solutions by day and reshapes the digital landscape after dark. Explore a portfolio driven by innovation, precision, and a passion for change.";
   const url = `${Constants.frontendUrl}${options?.path ?? ""}`;
 
   return {
@@ -23,7 +27,7 @@ export const getMetaData = (options?: {
     description,
     authors: {
       name: "Arjun VC",
-      url,
+      url: ExternalLinks.linkedin,
     },
     creator: "Arjun VC",
     icons: [
@@ -41,7 +45,7 @@ export const getMetaData = (options?: {
           url: `${Constants.frontendUrl}/images/preview.webp`,
           height: 630,
           width: 1200,
-          alt: "Batman looking at the bat signal pointed at the sky",
+          alt: "Developer by day, vigilante by night.",
         },
       ],
       creator: "@im_arjunvc",
@@ -54,9 +58,9 @@ export const getMetaData = (options?: {
       images: [
         {
           url: `${Constants.frontendUrl}/images/preview.webp`,
-          height: 630,
+          height: 600,
           width: 1200,
-          alt: "Batman looking at the bat signal pointed at the sky",
+          alt: "Developer by day, vigilante by night.",
         },
       ],
       title,
