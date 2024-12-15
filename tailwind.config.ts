@@ -7,12 +7,22 @@ export default {
     "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
   ],
   theme: {
+    screens: {
+      xs: "380px",
+      sm: "640px",
+      md: "939px",
+      lg: "1350px",
+      xl: "1920px",
+    },
+    fontFamily: {
+      montserrat: "var(--font-montserrat), sans-serif",
+    },
     extend: {
-      colors: {
-        background: "var(--background)",
-        foreground: "var(--foreground)",
-      },
+      colors: {},
     },
   },
   plugins: [],
+  corePlugins: {
+    preflight: false,
+  },
 } satisfies Config;
