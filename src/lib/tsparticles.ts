@@ -3,7 +3,6 @@ import { IOptions, RecursivePartial } from "@tsparticles/engine";
 export const batLogoOptions: RecursivePartial<IOptions> = {
   autoPlay: true,
   clear: true,
-  defaultThemes: {},
   delay: 0,
   detectRetina: true,
   duration: 0,
@@ -190,4 +189,180 @@ export const batLogoOptions: RecursivePartial<IOptions> = {
       },
     },
   ],
+};
+
+export const nightSkyOptions: RecursivePartial<IOptions> = {
+  autoPlay: true,
+  clear: true,
+  delay: 0,
+  fullScreen: true,
+  detectRetina: true,
+  duration: 0,
+  fpsLimit: 120,
+  interactivity: {
+    detectsOn: "window",
+    events: {
+      onClick: {
+        enable: true,
+        mode: "repulse",
+      },
+      onHover: {
+        enable: true,
+        mode: "bubble",
+      },
+      resize: {
+        delay: 0.5,
+        enable: true,
+      },
+    },
+    modes: {
+      bubble: {
+        distance: 250,
+        duration: 2,
+        mix: false,
+        opacity: 0,
+        size: 0,
+        divs: {
+          distance: 200,
+          duration: 0.4,
+          mix: false,
+          selectors: {},
+        },
+      },
+      repulse: {
+        distance: 400,
+        duration: 0.4,
+        factor: 100,
+        speed: 1,
+        maxSpeed: 50,
+        easing: "ease-out-quad",
+        divs: {
+          distance: 200,
+          duration: 0.4,
+          factor: 100,
+          speed: 1,
+          maxSpeed: 50,
+          easing: "ease-out-quad",
+          selectors: {},
+        },
+      },
+    },
+  },
+  particles: {
+    color: {
+      value: "#fefefe",
+    },
+    effect: {
+      close: true,
+      fill: true,
+      options: {},
+    },
+    move: {
+      angle: {
+        offset: 0,
+        value: 90,
+      },
+      center: {
+        x: 50,
+        y: 50,
+        mode: "percent",
+        radius: 0,
+      },
+      decay: 0,
+      distance: {},
+      direction: "none",
+      drift: 0,
+      enable: true,
+      outModes: {
+        default: "out",
+        bottom: "out",
+        left: "out",
+        right: "out",
+        top: "out",
+      },
+      random: false,
+      size: false,
+      speed: {
+        min: 0.1,
+        max: 0.5,
+      },
+      straight: false,
+      vibrate: false,
+      warp: false,
+    },
+    number: {
+      limit: {
+        mode: "delete",
+        value: 0,
+      },
+      value: 200,
+    },
+    opacity: {
+      value: {
+        min: 0.1,
+        max: 0.4,
+      },
+      animation: {
+        count: 0,
+        enable: true,
+        speed: 1,
+        decay: 0,
+        delay: 0,
+        sync: false,
+        mode: "auto",
+        startValue: "random",
+        destroy: "none",
+      },
+    },
+    reduceDuplicates: false,
+    shape: {
+      close: true,
+      fill: true,
+      options: {},
+      type: "circle",
+    },
+    size: {
+      value: {
+        min: 1,
+        max: 3,
+      },
+    },
+    stroke: {
+      width: 0,
+    },
+    destroy: {
+      bounds: {},
+      mode: "none",
+      split: {
+        count: 1,
+        factor: {
+          value: 3,
+        },
+        rate: {
+          value: {
+            min: 4,
+            max: 9,
+          },
+        },
+        sizeOffset: true,
+        particles: {},
+      },
+    },
+  },
+  pauseOnBlur: true,
+  pauseOnOutsideViewport: true,
+  responsive: [],
+  smooth: false,
+  style: {},
+  themes: [],
+  zLayers: 100,
+  key: "night-sky",
+  name: "Night Sky",
+  motion: {
+    disable: false,
+    reduce: {
+      factor: 4,
+      value: true,
+    },
+  },
 };
