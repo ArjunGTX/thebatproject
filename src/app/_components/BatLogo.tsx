@@ -24,7 +24,7 @@ export const BatLogo = () => {
 
   return (
     hasInitialized && (
-      <div className="w-full flex justify-center items-end lg:items-center">
+      <div className="w-full flex justify-center self-start lg:self-center">
         <div className="w-full">
           <Particles id="tsparticles" options={batLogoOptions} />
         </div>
