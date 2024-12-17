@@ -15,11 +15,10 @@ export const getMetaData = (options?: {
   path?: string;
 }): Metadata => {
   const title =
-    options?.title ??
-    "Developer by day, Vigilante by night | Portfolio of a digital architect";
+    options?.title ?? "Portfolio of a Digital Architect | The Bat Project";
   const description =
     options?.description ??
-    "Step into the world of a masked developer who crafts elegant web solutions by day and reshapes the digital landscape after dark. Explore a portfolio driven by innovation, precision, and a passion for change.";
+    "Step into the world of a masked vigilante who crafts elegant web solutions by day and reshapes the digital landscape after dark. Explore a portfolio driven by innovation, precision, and a passion for change.";
   const url = `${Constants.frontendUrl}${options?.path ?? ""}`;
 
   return {
