@@ -57,7 +57,7 @@ export const getMetaData = (options?: {
       images: [
         {
           url: `${Constants.frontendUrl}/images/preview.webp`,
-          height: 600,
+          height: 630,
           width: 1200,
           alt: "Developer by day, vigilante by night.",
         },
