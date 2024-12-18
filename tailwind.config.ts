@@ -16,7 +16,7 @@ export default {
     },
     fontFamily: {
       "bebas-neue": "var(--font-bebas-neue), sans-serif",
-      "rethink-sans": "var(--font-rethink-sans), sans-serif",
+      inter: "var(--font-inter), sans-serif",
     },
     extend: {
       colors: {},

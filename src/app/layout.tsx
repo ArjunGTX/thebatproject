@@ -1,10 +1,10 @@
-import { Bebas_Neue, Rethink_Sans } from "next/font/google";
+import { Bebas_Neue, Inter } from "next/font/google";
 import "@/styles/globals.css";
 import { getMetaData, getViewPort } from "@/utils/helpers";
 
-const rethinkSans = Rethink_Sans({
+const rethinkSans = Inter({
   subsets: ["latin"],
-  variable: "--font-rethink-sans",
+  variable: "--font-inter",
 });
 
 const bebasNeue = Bebas_Neue({
@@ -24,7 +24,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${bebasNeue.variable} ${rethinkSans.variable} antialiased font-rethink-sans bg-black text-white text-base`}
+        className={`${bebasNeue.variable} ${rethinkSans.variable} antialiased font-inter bg-black text-white text-base`}
       >
         {children}
       </body>

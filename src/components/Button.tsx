@@ -24,7 +24,7 @@ export const Button = forwardRef<HTMLButtonElement, ButtonProps>(
     return (
       <button
         className={cn(
-          "text-base font-rethink-sans border-none cursor-pointer disabled:cursor-not-allowed",
+          "text-base font-inter border-none cursor-pointer disabled:cursor-not-allowed",
           variant && variantClasses[variant],
           className,
         )}

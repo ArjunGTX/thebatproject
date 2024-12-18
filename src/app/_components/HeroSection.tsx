@@ -22,8 +22,11 @@ export const HeroSection = () => {
           Developer by day, <br /> Vigilante by night
         </h1>
         <p className="text-base text-gray-200 sm:text-lg xl:text-xl leading-snug">
-          If I can&apos;t change things here, <br className="md:hidden" /> if I
-          can&apos;t have an effect, <br />I don&apos;t care what happens to me.
+          <i>
+            &ldquo;If I can&apos;t change things here,{" "}
+            <br className="md:hidden" /> if I can&apos;t have an effect, <br />I
+            don&apos;t care what happens to me.&rdquo;
+          </i>
         </p>
         <Button variant="primary">SUMMON THE KNIGHT</Button>
       </div>
