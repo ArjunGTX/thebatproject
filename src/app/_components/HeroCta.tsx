@@ -17,9 +17,9 @@ export const HeroCta = () => {
       <Button popoverTarget={popoverTarget} variant="primary">
         SUMMON THE KNIGHT
       </Button>
-      <Modal className="w-[40rem]" id={popoverTarget}>
+      <Modal className="w-[40rem] h-[24rem] md:h-[26rem]" id={popoverTarget}>
         <div className="w-full px-6 pb-6 md:px-16 md:pb-16 md:pt-4 flex flex-col justify-start items-center">
-          <p className="text-2xl md:text-4xl text-left font-medium gap-2 mr-auto flex justify-start items-center">
+          <p className="text-2xl md:text-4xl text-left font-semibold gap-2 mr-auto flex justify-start items-center">
             Light the Bat Signal
             <Icon
               icon="fill/bat"

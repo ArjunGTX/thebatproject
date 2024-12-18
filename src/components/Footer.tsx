@@ -7,7 +7,7 @@ import { IconName } from "../../icons/types/icon-name";
 
 const SiteLinks = [
   {
-    name: "Work",
+    name: "Experience",
     url: InternalRoutes.journey,
   },
   {
@@ -75,6 +75,14 @@ const ProjectLinks = [
 
 const ContactLinks = [
   {
+    name: "Download Resume",
+    url: ExternalLinks.resume,
+  },
+  {
+    name: "Schedule a meeting",
+    url: ExternalLinks.meeting,
+  },
+  {
     name: "arjunvc.official@gmail.com",
     url: ExternalLinks.email,
   },
@@ -82,16 +90,12 @@ const ContactLinks = [
     name: "+91 8921404559",
     url: ExternalLinks.phone,
   },
-  {
-    name: "Schedule a meeting",
-    url: ExternalLinks.meeting,
-  },
 ];
 
 export const Footer = () => {
   return (
     <footer className="w-full flex justify-center items-start relative z-50">
-      <div className="h-[2px] bg-[linear-gradient(to_right,#9ca3af30,#6b7280,#9ca3af30)] w-full absolute top-0"></div>
+      <div className="h-[2px] bg-[linear-gradient(to_right,#9ca3af10,#6b7280,#9ca3af10)] w-full absolute top-0"></div>
       <PageSection className="w-full flex justify-center items-start py-12 md:py-14 lg:py-16 xl:py-20">
         <div className="flex justify-start flex-wrap items-start gap-y-10 gap-x-24">
           <div className="flex flex-col gap-3">
@@ -110,6 +114,7 @@ export const Footer = () => {
                     target="_blank"
                     rel="noopener"
                   >
+                    <span className="sr-only">{link.title}</span>
                     <Icon size="1.25rem" icon={link.icon} />
                   </CustomLink>
                 </li>
@@ -132,7 +137,7 @@ export const Footer = () => {
             </ul>
           </div>
           <div className="flex flex-col justify-start items-start gap-5">
-            <p className="text-lg font-medium">Work</p>
+            <p className="text-lg font-medium">Experience</p>
             <ul className="flex flex-col gap-3 p-0 m-0">
               {WorkLinks.map((link) => (
                 <li key={link.url} className="flex p-0 m-0">

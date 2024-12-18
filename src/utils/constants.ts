@@ -15,6 +15,7 @@ export const ExternalLinks = {
   prestoUi: "https://presto.iambatman.dev",
   phone: "tel:+918921404559",
   meeting: "https://cal.com/arjunvc/15min",
+  resume: "",
 };
 
 export const InternalRoutes = {

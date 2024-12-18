@@ -7,7 +7,7 @@ export const HeroCopy = () => {
       <h1 className="text-5xl xs:text-6xl font-bebas-neue sm:text-7xl lg:text-9xl xl:text-10xl leading-none font-bold tracking-normal lg:tracking-[0.02em]">
         Developer by day, <br /> Vigilante by night
       </h1>
-      <p className="text-base text-gray-200 sm:text-lg xl:text-xl leading-snug">
+      <p className="text-base text-gray-300 sm:text-lg xl:text-xl leading-snug">
         <i>
           &ldquo;If I can&apos;t change things here,{" "}
           <br className="md:hidden" /> if I can&apos;t have an effect, <br />I
