@@ -21,7 +21,7 @@ const links = [
 
 export const Header = () => {
   return (
-    <header className="w-full fixed top-0 left-0 h-20 flex justify-center items-end gap-4 px-14 py-3 z-50">
+    <header className="w-full fixed top-0 left-0 h-24 flex justify-center items-center gap-4 px-14 py-3 z-50 backdrop-blur-sm bg-black/10">
       <nav>
         <ul className="flex gap-6 md:gap-10 justify-center p-0 items-center">
           {links.map((link) => (
