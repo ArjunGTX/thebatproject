@@ -10,6 +10,7 @@ const rethinkSans = Inter({
 const bebasNeue = Bebas_Neue({
   weight: "400",
   variable: "--font-bebas-neue",
+  subsets: ["latin"],
 });
 
 export const metadata = getMetaData();
