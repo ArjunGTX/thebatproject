@@ -1,5 +1,5 @@
-import { Button } from "@/components/Button";
 import React from "react";
+import { HeroCta } from "./HeroCta";
 
 export const HeroCopy = () => {
   return (
@@ -14,7 +14,7 @@ export const HeroCopy = () => {
           don&apos;t care what happens to me.&rdquo;
         </i>
       </p>
-      <Button variant="primary">SUMMON THE KNIGHT</Button>
+      <HeroCta />
     </div>
   );
 };
