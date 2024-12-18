@@ -1,21 +1,23 @@
+import { InternalRoutes } from "@/utils/constants";
 import React from "react";
+import { CustomLink } from "./CustomLink";
 
 const links = [
   {
     name: "Journey",
-    url: "#",
+    url: InternalRoutes.journey,
   },
   {
     name: "Missions",
-    url: "#",
+    url: InternalRoutes.missions,
   },
   {
     name: "Arsenal",
-    url: "#",
+    url: InternalRoutes.arsenal,
   },
   {
     name: "Batlog",
-    url: "#",
+    url: InternalRoutes.blog,
   },
 ];
 
@@ -26,12 +28,12 @@ export const Header = () => {
         <ul className="flex gap-6 md:gap-10 justify-center p-0 items-center">
           {links.map((link) => (
             <li key={link.name} className="flex p-0 m-0">
-              <a
+              <CustomLink
                 href={link.url}
                 className="text-gray-300 hover:text-white no-underline md:text-lg"
               >
                 {link.name}
-              </a>
+              </CustomLink>
             </li>
           ))}
         </ul>
