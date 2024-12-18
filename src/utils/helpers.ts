@@ -32,7 +32,7 @@ export const getMetaData = (options?: {
     icons: [
       {
         rel: "icon",
-        url: "/favicon.ico",
+        url: "/images/favicon.webp",
       },
     ],
     twitter: {
@@ -66,8 +66,12 @@ export const getMetaData = (options?: {
       url,
       countryName: "India",
       emails: ["arjunvc.official@gmail.com"],
+      phoneNumbers: ["+91 8921 404 559"],
     },
     metadataBase: new URL(Constants.frontendUrl),
     publisher: "Arjun VC",
+    alternates: {
+      canonical: `${Constants.frontendUrl}${options?.path ?? ""}`,
+    },
   };
 };
