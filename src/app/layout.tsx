@@ -1,10 +1,16 @@
-import { Montserrat } from "next/font/google";
+import { Bebas_Neue, Inter } from "next/font/google";
 import "@/styles/globals.css";
 import { getMetaData, getViewPort } from "@/utils/helpers";
 
-const montserrat = Montserrat({
+const rethinkSans = Inter({
   subsets: ["latin"],
-  variable: "--font-montserrat",
+  variable: "--font-inter",
+});
+
+const bebasNeue = Bebas_Neue({
+  weight: "400",
+  variable: "--font-bebas-neue",
+  subsets: ["latin"],
 });
 
 export const metadata = getMetaData();
@@ -19,7 +25,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${montserrat.variable} antialiased font-montserrat bg-black text-white text-base`}
+        className={`${bebasNeue.variable} ${rethinkSans.variable} antialiased font-inter bg-black text-white text-base scroll-pt-24`}
       >
         {children}
       </body>

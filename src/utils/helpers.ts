@@ -15,11 +15,10 @@ export const getMetaData = (options?: {
   path?: string;
 }): Metadata => {
   const title =
-    options?.title ??
-    "Developer by day, Vigilante by night | Portfolio of a digital architect";
+    options?.title ?? "The Bat Project - Portfolio of a Digital Architect";
   const description =
     options?.description ??
-    "Step into the world of a masked developer who crafts elegant web solutions by day and reshapes the digital landscape after dark. Explore a portfolio driven by innovation, precision, and a passion for change.";
+    "Step into the world of a masked vigilante who crafts elegant web solutions by day and reshapes the digital landscape after dark. Explore a portfolio driven by innovation, precision, and a passion for change.";
   const url = `${Constants.frontendUrl}${options?.path ?? ""}`;
 
   return {
@@ -33,7 +32,7 @@ export const getMetaData = (options?: {
     icons: [
       {
         rel: "icon",
-        url: "/favicon.ico",
+        url: "/images/favicon.webp",
       },
     ],
     twitter: {
@@ -58,7 +57,7 @@ export const getMetaData = (options?: {
       images: [
         {
           url: `${Constants.frontendUrl}/images/preview.webp`,
-          height: 600,
+          height: 630,
           width: 1200,
           alt: "Developer by day, vigilante by night.",
         },
@@ -67,8 +66,12 @@ export const getMetaData = (options?: {
       url,
       countryName: "India",
       emails: ["arjunvc.official@gmail.com"],
+      phoneNumbers: ["+91 8921 404 559"],
     },
     metadataBase: new URL(Constants.frontendUrl),
     publisher: "Arjun VC",
+    alternates: {
+      canonical: `${Constants.frontendUrl}${options?.path ?? ""}`,
+    },
   };
 };

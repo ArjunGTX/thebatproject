@@ -5,7 +5,7 @@ export type ButtonVariant = "primary";
 
 export const variantClasses: Record<ButtonVariant, string> = {
   primary:
-    "border-1 border-white border-solid text-white bg-black py-3 px-10 focus-visible:[&:not(:disabled)]:bg-white focus-visible:[&:not(:disabled)]:text-black hover:[&:not(:disabled)]:bg-white hover:[&:not(:disabled)]:text-black disabled:opacity-30 transition-all duration-200",
+    "border border-gray-500 rounded-md border-solid text-white/80 bg-black/70 backdrop-blur-sm py-3 px-10  focus-visible:[&:not(:disabled)]:text-white hover:[&:not(:disabled)]:border-white/50 hover:[&:not(:disabled)]:text-white disabled:opacity-30",
 };
 
 export interface ButtonProps
@@ -24,7 +24,7 @@ export const Button = forwardRef<HTMLButtonElement, ButtonProps>(
     return (
       <button
         className={cn(
-          "text-base font-montserrat border-none cursor-pointer disabled:cursor-not-allowed",
+          "text-base bg-transparent font-inter border-none cursor-pointer disabled:cursor-not-allowed",
           variant && variantClasses[variant],
           className,
         )}
