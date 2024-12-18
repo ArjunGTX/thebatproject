@@ -9,7 +9,7 @@ const NotFound = () => {
       </h1>
       <p className="text-base max-w-[50ch] md:text-xl text-gray-300 mb-6">
         Even Batman can&apos;t find this page... It might have vanished into the
-        Batcave or been taken by the Joker. Either way, it&apos;s not here.{" "}
+        Batcave or been taken down by the Joker. Either way, it&apos;s not here.{" "}
       </p>
       <CustomLink
         href={InternalRoutes.home}
