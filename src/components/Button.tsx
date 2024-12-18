@@ -5,7 +5,7 @@ export type ButtonVariant = "primary";
 
 export const variantClasses: Record<ButtonVariant, string> = {
   primary:
-    "border-1 border-gray-500 rounded-md border-solid text-white/80 bg-white/10 py-3 px-10 focus-visible:[&:not(:disabled)]:bg-white/20 focus-visible:[&:not(:disabled)]:text-white hover:[&:not(:disabled)]:border-white/50 hover:[&:not(:disabled)]:text-white disabled:opacity-30",
+    "border border-gray-500 rounded-md border-solid text-white/80 bg-white/10 py-3 px-10 focus-visible:[&:not(:disabled)]:bg-white/20 focus-visible:[&:not(:disabled)]:text-white hover:[&:not(:disabled)]:border-white/50 hover:[&:not(:disabled)]:text-white disabled:opacity-30",
 };
 
 export interface ButtonProps

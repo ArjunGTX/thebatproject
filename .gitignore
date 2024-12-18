@@ -46,3 +46,7 @@ pnpm-lock.yaml
 
 ## minified images
 /public/images
+
+# auto-generated icon files
+/icons/types
+/public/icons/sprites

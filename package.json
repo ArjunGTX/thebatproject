@@ -4,14 +4,15 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "dev": "npm run pretty:check && npm run lint && npm run minify:images && next dev --turbopack",
-    "build": "npm run pretty:check && npm run lint && npm run minify:images && next build",
+    "dev": "npm run pretty:check && npm run lint && npm run minify:images && npm run build:icons && next dev --turbopack",
+    "build": "npm run pretty:check && npm run lint && npm run minify:images && npm run build:icons && next build",
     "start": "next start",
     "lint": "next lint --max-warnings 0",
     "pretty": "prettier --write \"./**/*.{json,tsx,ts,css,js,html,scss,yml}\"",
     "pretty:check": "prettier \"./**/*.{json,tsx,ts,css,js,html,scss,yml}\" --check",
     "minify:images": "npx tsx ./scripts/minify-images.ts",
-    "build:ci": "npx @cloudflare/next-on-pages@1"
+    "build:ci": "npx @cloudflare/next-on-pages@1",
+    "build:icons": "npx tsx ./scripts/build-icons.ts"
   },
   "dependencies": {
     "@tsparticles/all": "^3.7.1",
@@ -37,6 +38,7 @@
     "eslint-plugin-security": "^3.0.1",
     "fs-extra": "^11.2.0",
     "glob": "^11.0.0",
+    "node-html-parser": "^6.1.13",
     "postcss": "^8",
     "prettier": "^3.4.2",
     "sharp": "^0.33.5",
