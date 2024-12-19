@@ -1,17 +1,12 @@
 import React from "react";
 import dynamic from "next/dynamic";
-import { HeroSectionLoader } from "./HeroSectionLoader";
 import { HeroCopy } from "./HeroCopy";
 import { PageSection } from "./PageSection";
 
 const BatLogo = dynamic(
   () => import("./BatLogo").then((module) => module.BatLogo),
   {
-    loading: () => (
-      <div className="w-full flex justify-center items-center">
-        <HeroSectionLoader />
-      </div>
-    ),
+    loading: () => <></>,
   },
 );
 
