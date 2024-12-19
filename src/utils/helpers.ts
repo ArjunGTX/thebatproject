@@ -32,7 +32,7 @@ export const getMetaData = (options?: {
     icons: [
       {
         rel: "icon",
-        url: "/images/favicon.webp",
+        url: "/images/meta/favicon.webp",
       },
     ],
     twitter: {
@@ -41,7 +41,7 @@ export const getMetaData = (options?: {
       card: "summary_large_image",
       images: [
         {
-          url: `${Constants.frontendUrl}/images/preview.webp`,
+          url: `${Constants.frontendUrl}/images/meta/preview.webp`,
           height: 630,
           width: 1200,
           alt: "Developer by day, vigilante by night.",
@@ -56,7 +56,7 @@ export const getMetaData = (options?: {
       locale: "en_US",
       images: [
         {
-          url: `${Constants.frontendUrl}/images/preview.webp`,
+          url: `${Constants.frontendUrl}/images/meta/preview.webp`,
           height: 630,
           width: 1200,
           alt: "Developer by day, vigilante by night.",
