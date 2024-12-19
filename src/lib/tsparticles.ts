@@ -250,7 +250,7 @@ export const nightSkyOptions: RecursivePartial<IOptions> = {
   },
   particles: {
     color: {
-      value: "#fefefe",
+      value: "#b3b3b3",
     },
     effect: {
       close: true,

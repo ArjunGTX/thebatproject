@@ -50,3 +50,6 @@ pnpm-lock.yaml
 # auto-generated icon files
 /icons/types
 /public/icons/sprites
+
+# Service worker
+/public/sw.js
