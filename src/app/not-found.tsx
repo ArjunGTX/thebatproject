@@ -11,10 +11,7 @@ const NotFound = () => {
         Even Batman can&apos;t find this page... It might have vanished into the
         Batcave or been taken down by the Joker. Either way, it&apos;s not here.{" "}
       </p>
-      <CustomLink
-        href={InternalRoutes.home}
-        variant="primary"
-      >
+      <CustomLink href={InternalRoutes.home} variant="primary">
         Back to Home
       </CustomLink>
     </main>

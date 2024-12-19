@@ -4,15 +4,17 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "dev": "npm run pretty:check && npm run lint && npm run minify:images && npm run build:icons && next dev --turbopack",
-    "build": "npm run pretty:check && npm run lint && npm run minify:images && npm run build:icons && next build",
+    "dev": "npm run prebuild && next dev --turbopack",
+    "build": "npm run prebuild && next build",
     "start": "next start",
     "lint": "next lint --max-warnings 0",
     "pretty": "prettier --write \"./**/*.{json,tsx,ts,css,js,html,scss,yml}\"",
     "pretty:check": "prettier \"./**/*.{json,tsx,ts,css,js,html,scss,yml}\" --check",
     "minify:images": "npx tsx ./scripts/minify-images.ts",
     "build:ci": "npx @cloudflare/next-on-pages@1",
-    "build:icons": "npx tsx ./scripts/build-icons.ts"
+    "build:icons": "npx tsx ./scripts/build-icons.ts",
+    "generate:sw": "npx tsx ./scripts/generate-sw.ts",
+    "prebuild": "npm run pretty:check && npm run lint && npm run minify:images && npm run build:icons && npm run generate:sw"
   },
   "dependencies": {
     "@tsparticles/all": "^3.7.1",
