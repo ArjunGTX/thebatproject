@@ -95,14 +95,14 @@ const ContactLinks = [
 export const Footer = () => {
   return (
     <footer className="w-full flex justify-center items-start relative z-50">
-      <div className="h-[2px] bg-[linear-gradient(to_right,#9ca3af10,#6b7280,#9ca3af10)] w-full absolute top-0"></div>
+      <div className="h-[2px] bg-[linear-gradient(to_right,#9ca3af10,#6b7280bb,#9ca3af10)] w-full absolute top-0"></div>
       <PageSection className="w-full flex justify-center items-start py-12 md:py-14 lg:py-16 xl:py-20">
-        <div className="flex justify-start flex-wrap items-start gap-y-10 gap-x-24">
+        <div className="flex justify-start flex-wrap items-start gap-y-8 gap-x-24">
           <div className="flex flex-col gap-3">
             <h2 className="text-2xl md:text-4xl leading-none">
               The Bat Project
             </h2>
-            <p className="text-gray-400 text-sm">
+            <p className="text-tertiary text-sm">
               Portfolio of a digital architect
             </p>
             <ul className="flex justify-start p-0 m-0 gap-2 items-center mt-2">
@@ -110,7 +110,7 @@ export const Footer = () => {
                 <li key={link.title} className="flex">
                   <CustomLink
                     href={link.url}
-                    className="text-gray-300 size-8 border border-solid border-gray-500 flex justify-center items-center rounded-full hover:text-white"
+                    className="text-secondary size-8 border border-solid border-stroke flex justify-center items-center rounded-full hover:text-primary hover:border-tertiary focus-visible:text-primary"
                     target="_blank"
                     rel="noopener"
                   >
@@ -122,13 +122,13 @@ export const Footer = () => {
             </ul>
           </div>
           <div className="flex flex-col justify-start items-start gap-5">
-            <p className="text-lg font-medium">This Website</p>
+            <p className="text-xs text-tertiary">This Website</p>
             <ul className="flex flex-col gap-3 p-0 m-0">
               {SiteLinks.map((link) => (
                 <li key={link.url} className="flex p-0 m-0">
                   <CustomLink
                     href={link.url}
-                    className="text-gray-300 hover:text-white no-underline text-sm"
+                    className="text-secondary hover:text-primary focus-visible:text-primary text-sm"
                   >
                     {link.name}
                   </CustomLink>
@@ -137,7 +137,7 @@ export const Footer = () => {
             </ul>
           </div>
           <div className="flex flex-col justify-start items-start gap-5">
-            <p className="text-lg font-medium">Experience</p>
+            <p className="text-xs text-tertiary">Experience</p>
             <ul className="flex flex-col gap-3 p-0 m-0">
               {WorkLinks.map((link) => (
                 <li key={link.url} className="flex p-0 m-0">
@@ -145,7 +145,7 @@ export const Footer = () => {
                     href={link.url}
                     target="_blank"
                     rel="noopener"
-                    className="text-gray-300 hover:text-white no-underline text-sm"
+                    className="text-secondary hover:text-primary focus-visible:text-primary text-sm"
                   >
                     {link.name}
                   </CustomLink>
@@ -154,7 +154,7 @@ export const Footer = () => {
             </ul>
           </div>
           <div className="flex flex-col justify-start items-start gap-5">
-            <p className="text-lg font-medium">Projects</p>
+            <p className="text-xs text-tertiary">Projects</p>
             <ul className="flex flex-col gap-3 p-0 m-0">
               {ProjectLinks.map((link) => (
                 <li key={link.url} className="flex p-0 m-0">
@@ -162,7 +162,7 @@ export const Footer = () => {
                     href={link.url}
                     target="_blank"
                     rel="noopener"
-                    className="text-gray-300 hover:text-white no-underline text-sm"
+                    className="text-secondary hover:text-primary focus-visible:text-primary text-sm"
                   >
                     {link.name}
                   </CustomLink>
@@ -171,7 +171,7 @@ export const Footer = () => {
             </ul>
           </div>
           <div className="flex flex-col justify-start items-start gap-5">
-            <p className="text-lg font-medium">Contact Me</p>
+            <p className="text-xs text-tertiary">Contact Me</p>
             <ul className="flex flex-col gap-3 p-0 m-0">
               {ContactLinks.map((link) => (
                 <li key={link.url} className="flex p-0 m-0">
@@ -179,7 +179,7 @@ export const Footer = () => {
                     href={link.url}
                     target="_blank"
                     rel="noopener"
-                    className="text-gray-300 hover:text-white no-underline text-sm"
+                    className="text-secondary hover:text-primary focus-visible:text-primary text-sm"
                   >
                     {link.name}
                   </CustomLink>

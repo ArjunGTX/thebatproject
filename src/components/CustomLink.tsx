@@ -16,7 +16,7 @@ export const CustomLink: React.ForwardRefExoticComponent<
   return (
     <Link
       className={cn(
-        "text-base font-inter cursor-pointer",
+        "text-base font-inter cursor-pointer no-underline",
         variant && variantClasses[variant],
         className,
       )}

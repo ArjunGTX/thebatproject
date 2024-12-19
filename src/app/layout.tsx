@@ -25,7 +25,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${bebasNeue.variable} ${rethinkSans.variable} antialiased font-inter bg-black text-white text-base scroll-pt-24`}
+        className={`${bebasNeue.variable} ${rethinkSans.variable} antialiased font-inter bg-surface text-primary text-base scroll-pt-24`}
       >
         {children}
       </body>
