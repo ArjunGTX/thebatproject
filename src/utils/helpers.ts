@@ -33,6 +33,7 @@ export const getMetaData = (options?: {
       {
         rel: "icon",
         url: "/images/meta/favicon.webp",
+        type: "image/webp",
       },
     ],
     twitter: {
@@ -42,9 +43,10 @@ export const getMetaData = (options?: {
       images: [
         {
           url: `${Constants.frontendUrl}/images/meta/preview.webp`,
-          height: 630,
+          height: 600,
           width: 1200,
           alt: "Developer by day, vigilante by night.",
+          type: "image/webp",
         },
       ],
       creator: "@im_arjunvc",
@@ -57,9 +59,10 @@ export const getMetaData = (options?: {
       images: [
         {
           url: `${Constants.frontendUrl}/images/meta/preview.webp`,
-          height: 630,
+          height: 600,
           width: 1200,
           alt: "Developer by day, vigilante by night.",
+          type: "image/webp",
         },
       ],
       title,
