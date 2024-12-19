@@ -1,5 +1,6 @@
 import React from "react";
-import { HeroCta } from "./HeroCta";
+import { CustomLink } from "@/components/CustomLink";
+import { ExternalLinks } from "@/utils/constants";
 
 export const HeroCopy = () => {
   return (
@@ -14,7 +15,30 @@ export const HeroCopy = () => {
           don&apos;t care what happens to me.&rdquo;
         </i>
       </p>
-      <HeroCta />
+      <div className="flex justify-center flex-wrap items-center gap-4">
+        <CustomLink
+          variant="primary"
+          className="no-underline flex text-sm md:text-base flex-col justify-center items-center group w-64"
+          href={ExternalLinks.meeting}
+          target="_blank"
+        >
+          SUMMON THE KNIGHT
+          <small className="text-gray-400 group-hover:text-gray-200 group-focus-visible:text-gray-200">
+            (Schedule a call)
+          </small>
+        </CustomLink>
+        <CustomLink
+          variant="primary"
+          className="no-underline flex flex-col text-sm md:text-base justify-center items-center group w-64"
+          href={ExternalLinks.resume}
+          target="_blank"
+        >
+          VIGILANTE PROFILE
+          <small className="text-gray-400 group-hover:text-gray-200 group-focus-visible:text-gray-200">
+            (Download resume)
+          </small>
+        </CustomLink>
+      </div>
     </div>
   );
 };

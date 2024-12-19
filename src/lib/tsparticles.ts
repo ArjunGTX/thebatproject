@@ -153,7 +153,7 @@ export const batLogoOptions: RecursivePartial<IOptions> = {
     },
     scale: 1,
     type: "inline",
-    url: "/images/batlogo.svg",
+    url: "/images/misc/batlogo.svg",
     position: {
       x: 50,
       y: 50,

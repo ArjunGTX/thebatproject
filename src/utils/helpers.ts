@@ -32,7 +32,8 @@ export const getMetaData = (options?: {
     icons: [
       {
         rel: "icon",
-        url: "/images/favicon.webp",
+        url: "/images/meta/favicon.webp",
+        type: "image/webp",
       },
     ],
     twitter: {
@@ -41,10 +42,11 @@ export const getMetaData = (options?: {
       card: "summary_large_image",
       images: [
         {
-          url: `${Constants.frontendUrl}/images/preview.webp`,
-          height: 630,
+          url: `${Constants.frontendUrl}/images/meta/preview.webp`,
+          height: 600,
           width: 1200,
           alt: "Developer by day, vigilante by night.",
+          type: "image/webp",
         },
       ],
       creator: "@im_arjunvc",
@@ -56,10 +58,11 @@ export const getMetaData = (options?: {
       locale: "en_US",
       images: [
         {
-          url: `${Constants.frontendUrl}/images/preview.webp`,
-          height: 630,
+          url: `${Constants.frontendUrl}/images/meta/preview.webp`,
+          height: 600,
           width: 1200,
           alt: "Developer by day, vigilante by night.",
+          type: "image/webp",
         },
       ],
       title,
