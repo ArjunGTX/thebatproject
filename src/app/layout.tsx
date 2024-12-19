@@ -1,6 +1,7 @@
 import { Bebas_Neue, Inter } from "next/font/google";
 import "@/styles/globals.css";
 import { getMetaData, getViewPort } from "@/utils/helpers";
+import { ServiceWorker } from "@/components/ServiceWorker";
 
 const rethinkSans = Inter({
   subsets: ["latin"],
@@ -25,9 +26,10 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${bebasNeue.variable} ${rethinkSans.variable} antialiased font-inter bg-black text-white text-base scroll-pt-24`}
+        className={`${bebasNeue.variable} ${rethinkSans.variable} antialiased font-inter bg-surface text-primary text-base scroll-pt-24`}
       >
         {children}
+        <ServiceWorker />
       </body>
     </html>
   );
