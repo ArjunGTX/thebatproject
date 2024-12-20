@@ -17,7 +17,7 @@ export default function Home() {
     <>
       <Header />
       <NightSky />
-      <main className="flex justify-center items-center flex-col max-w-svw w-full min-h-svh">
+      <main className="flex justify-center items-center flex-col max-w-svw w-full">
         <HeroSection />
       </main>
       <Footer />
