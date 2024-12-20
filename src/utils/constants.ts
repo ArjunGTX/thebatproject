@@ -27,8 +27,4 @@ export const HomePageSections = {
 
 export const InternalRoutes = {
   blog: "/blog",
-  journey: "/#journey",
-  arsenal: "/#arsenal",
-  missions: "/#missions",
-  home: "/#main",
 };

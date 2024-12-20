@@ -2,21 +2,25 @@ import { PageSection } from "@/app/_components/PageSection";
 import React from "react";
 import { CustomLink } from "./CustomLink";
 import { Icon } from "./Icon";
-import { ExternalLinks, InternalRoutes } from "@/utils/constants";
+import {
+  ExternalLinks,
+  HomePageSections,
+  InternalRoutes,
+} from "@/utils/constants";
 import { IconName } from "../../icons/types/icon-name";
 
 const SiteLinks = [
   {
     name: "Experience",
-    url: InternalRoutes.journey,
+    url: `/#${HomePageSections.journey}`,
   },
   {
     name: "Projects",
-    url: InternalRoutes.missions,
+    url: `/#${HomePageSections.journey}`,
   },
   {
     name: "Skills",
-    url: InternalRoutes.arsenal,
+    url: `/#${HomePageSections.journey}`,
   },
   {
     name: "Blog",

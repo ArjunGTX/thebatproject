@@ -1,19 +1,19 @@
 import React from "react";
 import { CustomLink } from "./CustomLink";
-import { InternalRoutes } from "@/utils/constants";
+import { HomePageSections, InternalRoutes } from "@/utils/constants";
 
 const NavLinks = [
   {
     name: "Journey",
-    url: InternalRoutes.journey,
+    url: `/#${HomePageSections.journey}`,
   },
   {
     name: "Missions",
-    url: InternalRoutes.missions,
+    url: `/#${HomePageSections.missions}`,
   },
   {
     name: "Arsenal",
-    url: InternalRoutes.arsenal,
+    url: `/#${HomePageSections.arsenal}`,
   },
   {
     name: "Batlog",
