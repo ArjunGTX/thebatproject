@@ -23,7 +23,13 @@ export const CustomLink: React.ForwardRefExoticComponent<
       ref={ref}
       {...props}
     >
-      {children}
+      {variant === "primary" ? (
+        <span className="inline-flex flex-col justify-center items-center py-3 px-5 w-full h-full bg-surface rounded-md ">
+          {children}
+        </span>
+      ) : (
+        children
+      )}
     </Link>
   );
 });

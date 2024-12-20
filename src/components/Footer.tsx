@@ -16,11 +16,11 @@ const SiteLinks = [
   },
   {
     name: "Projects",
-    url: `/#${HomePageSections.journey}`,
+    url: `/#${HomePageSections.missions}`,
   },
   {
     name: "Skills",
-    url: `/#${HomePageSections.journey}`,
+    url: `/#${HomePageSections.arsenal}`,
   },
   {
     name: "Blog",
