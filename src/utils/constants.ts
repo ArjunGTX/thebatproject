@@ -18,6 +18,13 @@ export const ExternalLinks = {
   resume: "",
 };
 
+export const HomePageSections = {
+  main: "main",
+  journey: "journey",
+  arsenal: "arsenal",
+  missions: "missions",
+} as const;
+
 export const InternalRoutes = {
   blog: "/blog",
   journey: "/#journey",
