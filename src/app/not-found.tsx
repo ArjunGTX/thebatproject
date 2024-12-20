@@ -1,5 +1,5 @@
 import { CustomLink } from "@/components/CustomLink";
-import { InternalRoutes } from "@/utils/constants";
+import { HomePageSections } from "@/utils/constants";
 
 const NotFound = () => {
   return (
@@ -12,7 +12,7 @@ const NotFound = () => {
         somewhere&mdash;this one ends here. <br /> Return to the light and find
         your way.
       </p>
-      <CustomLink href={InternalRoutes.home} variant="primary">
+      <CustomLink href={`/$${HomePageSections.main}`} variant="primary">
         Back to Home
       </CustomLink>
     </main>
