@@ -1,6 +1,6 @@
 import React from "react";
 import { CustomLink } from "./CustomLink";
-import { HomePageSections, InternalRoutes } from "@/utils/constants";
+import { HomePageSections } from "@/utils/constants";
 
 const NavLinks = [
   {
@@ -16,8 +16,8 @@ const NavLinks = [
     url: `/#${HomePageSections.arsenal}`,
   },
   {
-    name: "Batlog",
-    url: InternalRoutes.blog,
+    name: "Unmasked",
+    url: `/#${HomePageSections.about}`,
   },
 ];
 

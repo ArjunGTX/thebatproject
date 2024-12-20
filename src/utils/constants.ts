@@ -23,8 +23,5 @@ export const HomePageSections = {
   journey: "journey",
   arsenal: "arsenal",
   missions: "missions",
+  about: "about",
 } as const;
-
-export const InternalRoutes = {
-  blog: "/blog",
-};

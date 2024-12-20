@@ -2,11 +2,7 @@ import { PageSection } from "@/app/_components/PageSection";
 import React from "react";
 import { CustomLink } from "./CustomLink";
 import { Icon } from "./Icon";
-import {
-  ExternalLinks,
-  HomePageSections,
-  InternalRoutes,
-} from "@/utils/constants";
+import { ExternalLinks, HomePageSections } from "@/utils/constants";
 import { IconName } from "../../icons/types/icon-name";
 
 const SiteLinks = [
@@ -23,8 +19,8 @@ const SiteLinks = [
     url: `/#${HomePageSections.arsenal}`,
   },
   {
-    name: "Blog",
-    url: InternalRoutes.blog,
+    name: "About",
+    url: `/#${HomePageSections.about}`,
   },
 ];
 
