@@ -16,6 +16,7 @@ export const ExternalLinks = {
   phone: "tel:+918921404559",
   meeting: "https://cal.com/arjunvc/15min",
   resume: "",
+  vicara: "https://www.vicara.co/",
 };
 
 export const HomePageSections = {

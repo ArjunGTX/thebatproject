@@ -4,6 +4,8 @@ import React from "react";
 import { PageSection } from "./PageSection";
 import { HomePageSections } from "@/utils/constants";
 import { motion } from "framer-motion";
+import { Experiences } from "@/utils/experiences";
+import { ExperienceCard } from "./ExperienceCard";
 
 const container = {
   hidden: { opacity: 0, y: 100 },
@@ -25,31 +27,36 @@ export const WorkSection = () => {
   return (
     <PageSection
       id={HomePageSections.journey}
-      className="w-full snap-center min-h-svh overflow-x-clip pt-[18vh] xs:pt-[18vh] md:pt-[20vh] flex flex-col justify-start items-start"
+      className="w-full snap-center min-h-svh overflow-x-clip"
     >
-      <motion.div
-        variants={container}
-        initial="hidden"
-        whileInView="show"
-        className="flex flex-col justify-start items-start"
-      >
-        <motion.h2
-          variants={item}
-          className="text-4xl md:text-5xl lg:text-7xl font-bebas-neue"
+      <div className="w-full flex flex-col justify-start items-start gap-10 lg:gap-[7vh] xl:gap-[9vh] max-w-[65rem] mx-auto">
+        <motion.div
+          variants={container}
+          initial="hidden"
+          whileInView="show"
+          viewport={{ once: true }}
+          className="flex flex-col justify-start items-start sticky top-0 bg-surface z-10 pt-[11vh] xs:pt-[11vh] md:pt-[15vh] w-full pb-4"
         >
-          The Knight&apos;s journey
-        </motion.h2>
-        <motion.p
-          variants={item}
-          className="text-secondary max-w-[50ch] text-xs md:text-sm lg:text-lg"
-        >
-          Every vigilante needs a backstory. Here&apos;s my professional
-          journey, from sidekick to full-fledged hero of the web development
-          world.
-        </motion.p>
-      </motion.div>
-      <div className="w-full mt-10 p-[1px] rounded-lg h-[30rem] bg-[radial-gradient(circle_at_80%_60%,_#424242,_#2b2b2b,_#363636,_#3c3c3c,_#232323)]">
-        <div className="w-full h-full rounded-lg bg-surface"></div>
+          <motion.h2
+            variants={item}
+            viewport={{ once: true }}
+            className="text-4xl md:text-5xl lg:text-7xl font-bebas-neue"
+          >
+            The Knight&apos;s journey
+          </motion.h2>
+          <motion.p
+            variants={item}
+            viewport={{ once: true }}
+            className="text-tertiary max-w-[50ch] text-xs md:text-sm lg:text-lg"
+          >
+            Every vigilante needs a backstory. Here&apos;s my professional
+            journey, from sidekick to full-fledged hero of the web development
+            world.
+          </motion.p>
+        </motion.div>
+        {Experiences.map((experience, index) => (
+          <ExperienceCard experience={experience} key={index} />
+        ))}
       </div>
     </PageSection>
   );
