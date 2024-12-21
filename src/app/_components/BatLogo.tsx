@@ -1,13 +1,19 @@
 "use client";
 
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useMemo, useState } from "react";
 import Particles, { initParticlesEngine } from "@tsparticles/react";
 import { loadAll } from "@tsparticles/all";
-import { batLogoOptions } from "@/lib/tsparticles";
-import { motion } from "framer-motion";
+import { motion, useReducedMotion } from "framer-motion";
+import { getBatLogoOptions } from "@/lib/tsparticles";
 
 export const BatLogo = () => {
   const [hasInitialized, setHasInitialized] = useState(false);
+
+  const reduceMotion = useReducedMotion();
+
+  const batLogoOptions = useMemo(() => {
+    return getBatLogoOptions(!!reduceMotion);
+  }, [reduceMotion]);
 
   useEffect(() => {
     (async () => {

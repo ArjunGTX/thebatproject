@@ -2,6 +2,7 @@ import { Bebas_Neue, Inter } from "next/font/google";
 import "@/styles/globals.css";
 import { getMetaData, getViewPort } from "@/utils/helpers";
 import { ServiceWorker } from "@/components/ServiceWorker";
+import { MotionConfig } from "framer-motion";
 
 const rethinkSans = Inter({
   subsets: ["latin"],
@@ -28,7 +29,7 @@ export default function RootLayout({
       <body
         className={`${bebasNeue.variable} ${rethinkSans.variable} antialiased font-inter bg-surface text-primary text-base`}
       >
-        {children}
+        <MotionConfig reducedMotion="user">{children}</MotionConfig>
         <ServiceWorker />
       </body>
     </html>

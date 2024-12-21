@@ -1,12 +1,19 @@
 "use client";
 
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useMemo, useState } from "react";
 import Particles, { initParticlesEngine } from "@tsparticles/react";
 import { loadAll } from "@tsparticles/all";
-import { nightSkyOptions } from "@/lib/tsparticles";
+import { useReducedMotion } from "framer-motion";
+import { getNightSkyOptions } from "@/lib/tsparticles";
 
 export const NightSky = () => {
   const [hasInitialized, setHasInitialized] = useState(false);
+
+  const reduceMotion = useReducedMotion();
+
+  const nightSkyOptions = useMemo(() => {
+    return getNightSkyOptions(!!reduceMotion);
+  }, [reduceMotion]);
 
   useEffect(() => {
     (async () => {

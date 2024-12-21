@@ -94,7 +94,7 @@ const ContactLinks = [
 
 export const Footer = () => {
   return (
-    <footer className="w-full flex justify-center items-start relative z-50 min-h-[40vh] snap-center">
+    <footer className="w-full flex justify-center items-start relative z-50 min-h-[50vh] snap-center">
       <div className="h-[2px] bg-[linear-gradient(to_right,#9ca3af10,#6b7280bb,#9ca3af10)] w-full absolute top-0"></div>
       <PageSection className="w-full flex justify-center items-start py-12 md:py-14 lg:py-16 xl:py-20">
         <div className="flex justify-start flex-wrap items-start gap-y-8 gap-x-24">
