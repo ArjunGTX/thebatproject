@@ -16,12 +16,13 @@ export const ExternalLinks = {
   phone: "tel:+918921404559",
   meeting: "https://cal.com/arjunvc/15min",
   resume: "",
+  vicara: "https://www.vicara.co/",
 };
 
-export const InternalRoutes = {
-  blog: "/blog",
-  journey: "/#journey",
-  arsenal: "/#arsenal",
-  missions: "/#missions",
-  home: "/#main",
-};
+export const HomePageSections = {
+  main: "main",
+  journey: "journey",
+  arsenal: "arsenal",
+  missions: "missions",
+  about: "about",
+} as const;

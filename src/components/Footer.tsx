@@ -2,25 +2,25 @@ import { PageSection } from "@/app/_components/PageSection";
 import React from "react";
 import { CustomLink } from "./CustomLink";
 import { Icon } from "./Icon";
-import { ExternalLinks, InternalRoutes } from "@/utils/constants";
+import { ExternalLinks, HomePageSections } from "@/utils/constants";
 import { IconName } from "../../icons/types/icon-name";
 
 const SiteLinks = [
   {
     name: "Experience",
-    url: InternalRoutes.journey,
+    url: `/#${HomePageSections.journey}`,
   },
   {
     name: "Projects",
-    url: InternalRoutes.missions,
+    url: `/#${HomePageSections.missions}`,
   },
   {
     name: "Skills",
-    url: InternalRoutes.arsenal,
+    url: `/#${HomePageSections.arsenal}`,
   },
   {
-    name: "Blog",
-    url: InternalRoutes.blog,
+    name: "About",
+    url: `/#${HomePageSections.about}`,
   },
 ];
 
@@ -94,7 +94,7 @@ const ContactLinks = [
 
 export const Footer = () => {
   return (
-    <footer className="w-full flex justify-center items-start relative z-50">
+    <footer className="w-full flex justify-center items-start relative z-50 min-h-[50vh] snap-center">
       <div className="h-[2px] bg-[linear-gradient(to_right,#9ca3af10,#6b7280bb,#9ca3af10)] w-full absolute top-0"></div>
       <PageSection className="w-full flex justify-center items-start py-12 md:py-14 lg:py-16 xl:py-20">
         <div className="flex justify-start flex-wrap items-start gap-y-8 gap-x-24">
