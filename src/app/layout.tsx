@@ -25,7 +25,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className="snap-y snap-mandatory">
+    <html lang="en" className="">
       <body
         className={`${bebasNeue.variable} ${rethinkSans.variable} antialiased font-rethink-sans bg-surface text-primary text-base`}
       >

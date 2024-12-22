@@ -20,7 +20,7 @@ export const ExperienceDescription: React.FC<Props> = ({
 }) => {
   const descriptionRef = useRef<HTMLParagraphElement>(null);
 
-  const duration = 1.25;
+  const duration = 4;
   const delay = 0.75 + duration * index;
 
   const count = useMotionValue(0);
@@ -50,7 +50,7 @@ export const ExperienceDescription: React.FC<Props> = ({
   return (
     <motion.p
       ref={descriptionRef}
-      className="text-tertiary text-xs md:text-sm lg:text-base max-w-[44ch]"
+      className="text-tertiary text-xs md:text-sm lg:text-base xl:text-lg leading-normal"
     >
       {displayText}
     </motion.p>

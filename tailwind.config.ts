@@ -27,7 +27,7 @@ export default {
       transparent: "transparent",
     },
     fontSize: {
-      xs: "0.875rem",
+      xs: "0.895rem",
       sm: "0.925rem",
       base: "1rem",
       lg: "1.125rem",

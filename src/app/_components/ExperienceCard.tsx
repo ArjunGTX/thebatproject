@@ -29,7 +29,7 @@ const item = {
 
 export const ExperienceCard: React.FC<Props> = ({ experience }) => {
   return (
-    <div className="w-full grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-20 snap-start">
+    <div className="w-full grid grid-cols-1 gap-6 md:gap-20 min-h-[66vh]">
       <motion.div
         variants={container}
         viewport={{ once: true }}
@@ -40,19 +40,19 @@ export const ExperienceCard: React.FC<Props> = ({ experience }) => {
         <motion.h3
           viewport={{ once: true }}
           variants={item}
-          className="text-2xl lg:text-3xl xl:text-4xl mb-1"
+          className="text-xl lg:text-2xl xl:text-3xl mb-1 uppercase"
         >
           {experience.title}
         </motion.h3>
         <motion.p
           variants={item}
           viewport={{ once: true }}
-          className="flex text-xs md:text-base text-secondary justify-start items-center"
+          className="flex text-xs lg:text-base text-secondary justify-start items-center"
         >
           <CustomLink
             href={experience.companyLink}
             target="_blank"
-            className="text-xs md:text-base text-secondary hover:text-primary hover:underline"
+            className="text-xs lg:text-base text-secondary hover:text-primary hover:underline"
           >
             {experience.company}
           </CustomLink>
@@ -61,7 +61,7 @@ export const ExperienceCard: React.FC<Props> = ({ experience }) => {
         <CustomLink
           href={experience.imageLink}
           target="_blank"
-          className="w-full"
+          className="w-full md:w-3/4 xl:w-[80%]"
         >
           <motion.div
             variants={item}
@@ -77,22 +77,20 @@ export const ExperienceCard: React.FC<Props> = ({ experience }) => {
           </motion.div>
         </CustomLink>
         <motion.p
-          viewport={{ once: true }}
           variants={item}
-          className="mt-2 text-xs md:text-sm lg:text-base text-tertiary text-balance"
+          viewport={{ once: true }}
+          className="text-xs md:text-sm lg:text-lg text-secondary font-medium mt-1"
         >
           {experience.subheading}
         </motion.p>
+        <ul className="w-full flex flex-col p-0 gap-2 mt-2">
+          {experience.descriptions.map((description, index) => (
+            <li className="flex" key={index}>
+              <ExperienceDescription description={description} index={index} />
+            </li>
+          ))}
+        </ul>
       </motion.div>
-      <div className="w-full flex flex-col gap-2 lg:gap-4 lg:mt-16">
-        {experience.descriptions.map((description, index) => (
-          <ExperienceDescription
-            description={description}
-            key={index}
-            index={index}
-          />
-        ))}
-      </div>
     </div>
   );
 };
