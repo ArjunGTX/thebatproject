@@ -1,11 +1,12 @@
-import { Bebas_Neue, Inter } from "next/font/google";
+import { Bebas_Neue, Rethink_Sans } from "next/font/google";
 import "@/styles/globals.css";
 import { getMetaData, getViewPort } from "@/utils/helpers";
 import { ServiceWorker } from "@/components/ServiceWorker";
+import { MotionConfig } from "framer-motion";
 
-const rethinkSans = Inter({
+const rethinkSans = Rethink_Sans({
   subsets: ["latin"],
-  variable: "--font-inter",
+  variable: "--font-rethink-sans",
 });
 
 const bebasNeue = Bebas_Neue({
@@ -24,11 +25,11 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" className="">
       <body
-        className={`${bebasNeue.variable} ${rethinkSans.variable} antialiased font-inter bg-surface text-primary text-base scroll-pt-24`}
+        className={`${bebasNeue.variable} ${rethinkSans.variable} antialiased font-rethink-sans bg-surface text-primary text-base`}
       >
-        {children}
+        <MotionConfig reducedMotion="user">{children}</MotionConfig>
         <ServiceWorker />
       </body>
     </html>

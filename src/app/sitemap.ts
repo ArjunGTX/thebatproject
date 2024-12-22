@@ -1,4 +1,4 @@
-import { Constants, InternalRoutes } from "@/utils/constants";
+import { Constants } from "@/utils/constants";
 import { MetadataRoute } from "next";
 
 export default function sitemap(): Promise<MetadataRoute.Sitemap> {
@@ -8,12 +8,6 @@ export default function sitemap(): Promise<MetadataRoute.Sitemap> {
       lastModified: new Date(),
       priority: 1.0,
       changeFrequency: "daily",
-    },
-    {
-      url: `${Constants.frontendUrl}${InternalRoutes.blog}`,
-      lastModified: new Date(),
-      changeFrequency: "weekly",
-      priority: 0.8,
     },
   ] as MetadataRoute.Sitemap);
 }

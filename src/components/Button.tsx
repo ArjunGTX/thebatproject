@@ -5,7 +5,7 @@ export type ButtonVariant = "primary";
 
 export const variantClasses: Record<ButtonVariant, string> = {
   primary:
-    "border border-stroke rounded-md border-solid text-secondary bg-surface/70 backdrop-blur-sm py-3 px-5 focus-visible:[&:not(:disabled)]:text-primary hover:[&:not(:disabled)]:border-tertiary hover:[&:not(:disabled)]:text-primary disabled:opacity-30",
+    "rounded-md uppercase text-secondary hover:[&:not(:disabled)]:bg-[radial-gradient(circle_at_80%_60%,_#232323,_#2b2b2b,_#4f4f4f,_#363636,_#424242)] bg-[radial-gradient(circle_at_80%_60%,_#424242,_#2b2b2b,_#363636,_#3c3c3c,_#232323)] p-[1px] disabled:opacity-30",
 };
 
 export interface ButtonProps
@@ -24,7 +24,7 @@ export const Button = forwardRef<HTMLButtonElement, ButtonProps>(
     return (
       <button
         className={cn(
-          "text-base bg-transparent font-inter border-none cursor-pointer disabled:cursor-not-allowed",
+          "text-base bg-transparent font-rethink-sans border-none cursor-pointer disabled:cursor-not-allowed",
           variant && variantClasses[variant],
           className,
         )}
@@ -32,7 +32,13 @@ export const Button = forwardRef<HTMLButtonElement, ButtonProps>(
         ref={ref}
         {...props}
       >
-        {children}
+        {variant === "primary" ? (
+          <span className="inline-flex flex-col justify-center items-center py-3 px-5 w-full h-full bg-surface rounded-md ">
+            {children}
+          </span>
+        ) : (
+          children
+        )}
       </button>
     );
   },

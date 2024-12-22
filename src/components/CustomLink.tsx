@@ -16,14 +16,20 @@ export const CustomLink: React.ForwardRefExoticComponent<
   return (
     <Link
       className={cn(
-        "text-base font-inter cursor-pointer no-underline",
+        "text-base font-rethink-sans cursor-pointer no-underline",
         variant && variantClasses[variant],
         className,
       )}
       ref={ref}
       {...props}
     >
-      {children}
+      {variant === "primary" ? (
+        <span className="inline-flex flex-col justify-center items-center py-3 px-5 w-full h-full bg-surface rounded-md ">
+          {children}
+        </span>
+      ) : (
+        children
+      )}
     </Link>
   );
 });

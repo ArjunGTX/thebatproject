@@ -16,18 +16,18 @@ export default {
     },
     fontFamily: {
       "bebas-neue": "var(--font-bebas-neue), sans-serif",
-      inter: "var(--font-inter), sans-serif",
+      "rethink-sans": "var(--font-rethink-sans), sans-serif",
     },
     colors: {
       surface: "#0A0A0A",
       primary: "#ffffff",
       secondary: "#b3b3b3",
-      tertiary: "#828282",
+      tertiary: "#969696",
       stroke: "#555555",
       transparent: "transparent",
     },
     fontSize: {
-      xs: "0.875rem",
+      xs: "0.895rem",
       sm: "0.925rem",
       base: "1rem",
       lg: "1.125rem",
