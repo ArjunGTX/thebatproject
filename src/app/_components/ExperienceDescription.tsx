@@ -4,6 +4,7 @@ import {
   animate,
   useInView,
   useMotionValue,
+  useReducedMotion,
   useTransform,
 } from "framer-motion";
 import React, { useEffect, useRef } from "react";
@@ -30,8 +31,12 @@ export const ExperienceDescription: React.FC<Props> = ({
   );
 
   const isInView = useInView(descriptionRef);
+  const reduceMotion = useReducedMotion();
 
   useEffect(() => {
+    if (reduceMotion) {
+      return;
+    }
     const controls = animate(count, description.length, {
       type: "tween",
       duration,
@@ -45,9 +50,28 @@ export const ExperienceDescription: React.FC<Props> = ({
       controls.stop();
     }
     return controls.stop;
-  }, [description.length, isInView, count, delay, duration]);
+  }, [description.length, isInView, count, delay, duration, reduceMotion]);
 
-  return (
+  return reduceMotion ? (
+    <motion.p
+      initial={{
+        opacity: 0,
+      }}
+      whileInView={{
+        opacity: 1,
+        transition: {
+          duration: 1,
+          delay,
+        },
+      }}
+      viewport={{
+        once: true,
+      }}
+      className="text-tertiary text-xs md:text-sm lg:text-base min-h-[12lh] leading-normal"
+    >
+      {description}
+    </motion.p>
+  ) : (
     <motion.p
       ref={descriptionRef}
       className="text-tertiary text-xs md:text-sm lg:text-base min-h-[12lh] leading-normal"
