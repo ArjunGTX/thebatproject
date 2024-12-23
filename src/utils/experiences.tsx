@@ -30,7 +30,7 @@ export const Experiences: Experience[] = [
         <CustomLink
           href={ExternalLinks.patr}
           target="_blank"
-          className="font-medium underline hover:text-primary text-xs md:text-sm lg:text-lg text-secondary "
+          className="font-medium underline hover:text-primary text-xs md:text-sm lg:text-lg xl:text-xl text-secondary "
         >
           Patr
         </CustomLink>
@@ -55,7 +55,7 @@ export const Experiences: Experience[] = [
         <CustomLink
           href={ExternalLinks.findr}
           target="_blank"
-          className="font-medium underline hover:text-primary text-xs md:text-sm lg:text-lg text-secondary"
+          className="font-medium underline hover:text-primary text-xs md:text-sm lg:text-lg xl:text-xl text-secondary"
         >
           Findr
         </CustomLink>
