@@ -50,7 +50,7 @@ export const ExperienceDescription: React.FC<Props> = ({
   return (
     <motion.p
       ref={descriptionRef}
-      className="text-tertiary text-xs md:text-sm lg:text-base xl:text-lg leading-normal"
+      className="text-tertiary text-xs md:text-sm lg:text-base min-h-[12lh] leading-normal"
     >
       {displayText}
     </motion.p>
