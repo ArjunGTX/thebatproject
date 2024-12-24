@@ -50,7 +50,7 @@ export const SkillSection = () => {
           initial="hidden"
           whileInView="show"
           viewport={{ once: true }}
-          className="flex flex-col justify-start items-center text-center z-10 w-full pb-4"
+          className="flex flex-col justify-start items-start z-10 w-full pb-4"
         >
           <motion.h2
             variants={item}
@@ -82,7 +82,7 @@ export const SkillSection = () => {
             initial="initial"
             whileInView="animate"
             viewport={{ once: true }}
-            className="flex flex-wrap gap-2 items-start justify-center"
+            className="flex flex-wrap gap-2 items-start justify-start"
           >
             {Skills.map((skill, index) => (
               <CustomLink
