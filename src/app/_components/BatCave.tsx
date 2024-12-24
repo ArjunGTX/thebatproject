@@ -18,13 +18,16 @@ export const BatCave = () => {
 
   const { canvasHeight, canvasWidth } = getCanvasDimensions();
 
-  const [isLoaded, setIsLoaded] = React.useState(false);
+  const [status, setStatus] = React.useState<
+    "idle" | "loading" | "error" | "success"
+  >("idle");
 
   useEffect(() => {
     const canvas = canvasRef.current;
     if (!canvas) {
       return;
     }
+    setStatus("loading");
     const { canvasHeight, canvasWidth } = getCanvasDimensions();
     const scene = new THREE.Scene();
 
@@ -57,13 +60,21 @@ export const BatCave = () => {
     scene.add(light5);
 
     const loader = new GLTFLoader();
-    loader.load("/models/batcave/scene.gltf", (gltf) => {
-      const model = gltf.scene;
-      model.scale.set(0.8, 0.8, 0.8);
-      model.position.set(-1, 1, 0);
-      scene.add(model);
-      setIsLoaded(true);
-    });
+    loader.load(
+      "/models/batcave/scene.gltf",
+      (gltf) => {
+        const model = gltf.scene;
+        model.scale.set(0.8, 0.8, 0.8);
+        model.position.set(-1, 1, 0);
+        scene.add(model);
+        setStatus("success");
+      },
+      undefined,
+      (err) => {
+        setStatus("error");
+        return err;
+      },
+    );
     const renderer = new THREE.WebGLRenderer({
       canvas,
       antialias: true,
@@ -101,14 +112,22 @@ export const BatCave = () => {
 
   return (
     <div className="w-full h-full relative">
-      <canvas
-        ref={canvasRef}
-        width={canvasWidth}
-        height={canvasHeight}
-        className={cn(!isLoaded && "pointer-events-none")}
-      ></canvas>
-      {!isLoaded && (
-        <BatCaveLoader className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-10" />
+      {status === "error" ? (
+        <p className="text-tertiary mx-auto text-center">
+          Uh oh, someone&apos;s messed with the Batcave! Alfred&apos;s on it.
+        </p>
+      ) : (
+        <>
+          <canvas
+            ref={canvasRef}
+            width={canvasWidth}
+            height={canvasHeight}
+            className={cn(status !== "success" && "pointer-events-none")}
+          ></canvas>
+          {status === "loading" && (
+            <BatCaveLoader className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-10" />
+          )}
+        </>
       )}
     </div>
   );
