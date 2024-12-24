@@ -26,7 +26,3 @@ export const HomePageSections = {
   missions: "missions",
   about: "about",
 } as const;
-
-export const CONSTANTS = {
-  MODEL_CACHING: "MODEL_CACHING",
-} as const;

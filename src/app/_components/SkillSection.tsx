@@ -3,12 +3,13 @@
 import React, { useRef } from "react";
 import { PageSection } from "./PageSection";
 import { HomePageSections } from "@/utils/constants";
-import { motion, useInView } from "framer-motion";
+import { motion } from "framer-motion";
 import { Skills } from "@/utils/skills";
 import { CustomLink } from "@/components/CustomLink";
 import Image from "next/image";
 import dynamic from "next/dynamic";
 import { BatCaveLoader } from "./BatCaveLoader";
+import { Button } from "@/components/Button";
 
 const container = {
   hidden: { opacity: 0, y: 100 },
@@ -32,12 +33,8 @@ const BatCave = dynamic(() => import("./BatCave").then((mod) => mod.BatCave), {
 
 export const SkillSection = () => {
   const batCaveContainer = useRef<HTMLDivElement>(null);
-  const hasLoaded = useRef(false);
 
-  const isInView = useInView(batCaveContainer, {
-    margin: "20px 0px 20px 0px",
-  });
-  hasLoaded.current = hasLoaded.current || isInView;
+  const [showBatCave, setShowBatCave] = React.useState(false);
 
   return (
     <PageSection
@@ -113,7 +110,28 @@ export const SkillSection = () => {
             ref={batCaveContainer}
             className="min-h-[20rem] md:min-h-[45vh] flex justify-center items-center overflow-hidden"
           >
-            {hasLoaded.current && <BatCave />}
+            {showBatCave ? (
+              <BatCave />
+            ) : (
+              <div className="flex flex-col mt-16 justify-center items-center gap-2 rounded-md overflow-hidden w-full max-w-[65rem] aspect-[1.89/1] relative">
+                <Image
+                  alt="Preview of the batcave"
+                  src="/images/misc/batcave.webp"
+                  fill
+                />
+                <div className="flex flex-col justify-center items-center gap-2 absolute w-full h-full z-10 backdrop-blur-sm bg-surface/10">
+                  <Button
+                    variant="primary"
+                    onClick={() => setShowBatCave(true)}
+                  >
+                    Enter the BatCave
+                  </Button>
+                  <p className="text-tertiary text-xs md:text-sm">
+                    This experience involves downloading a 100MB 3D model.
+                  </p>
+                </div>
+              </div>
+            )}
           </div>
         </div>
       </div>
