@@ -7,8 +7,8 @@ import { OrbitControls } from "three/examples/jsm/controls/OrbitControls";
 import { BatCaveLoader } from "./BatCaveLoader";
 
 const getCanvasDimensions = () => {
-  const canvasWidth = Math.min(window.innerWidth, 900);
-  const canvasHeight = canvasWidth / 1.8;
+  const canvasWidth = Math.min(window.innerWidth, 1280);
+  const canvasHeight = canvasWidth / 1.6;
   return { canvasWidth, canvasHeight };
 };
 
@@ -33,25 +33,25 @@ export const BatCave = () => {
       0.1,
       100,
     );
-    camera.position.set(0, 0, 8);
+    camera.position.set(0, 0, 10);
     scene.add(camera);
 
-    const light1 = new THREE.AmbientLight(0xaaaaaa, 0.1);
+    const light1 = new THREE.AmbientLight(0xaaaaaa, 0.25);
     scene.add(light1);
 
-    const light2 = new THREE.DirectionalLight(0xaaaaaa, 0.5);
+    const light2 = new THREE.DirectionalLight(0xaaaaaa, 0.75);
     light2.position.set(0, 100, -100);
     scene.add(light2);
 
-    const light3 = new THREE.DirectionalLight(0xaaaaaa, 0.5);
+    const light3 = new THREE.DirectionalLight(0xaaaaaa, 0.75);
     light3.position.set(0, 0, 50);
     scene.add(light3);
 
-    const light4 = new THREE.PointLight(0xffee88, 2);
+    const light4 = new THREE.PointLight(0xffee88, 4);
     light4.position.set(-1, -1, 3);
     scene.add(light4);
 
-    const light5 = new THREE.PointLight(0xffee88, 3);
+    const light5 = new THREE.PointLight(0xffee88, 4);
     light5.position.set(3, 1, -1);
     scene.add(light5);
 
@@ -60,6 +60,7 @@ export const BatCave = () => {
     loader.load("/models/batcave/scene.gltf", (glb) => {
       const model = glb.scene;
       model.scale.set(0.8, 0.8, 0.8);
+      model.position.set(-1, 1, 0);
       scene.add(model);
       setIsLoaded(true);
     });
@@ -74,6 +75,7 @@ export const BatCave = () => {
     const orbitControls = new OrbitControls(camera, renderer.domElement);
     orbitControls.enableDamping = true;
     orbitControls.enablePan = false;
+    orbitControls.enableZoom = false;
 
     renderer.setSize(canvasWidth, canvasHeight);
     renderer.setPixelRatio(window.devicePixelRatio);
@@ -100,14 +102,14 @@ export const BatCave = () => {
   }, []);
 
   return (
-    <div className="w-full h-full relative bg-secondary">
+    <div className="w-full h-full relative ">
       <canvas
         ref={canvasRef}
         width={canvasWidth}
         height={canvasHeight}
       ></canvas>
       {!isLoaded && (
-        <BatCaveLoader className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-10 animate-pulse" />
+        <BatCaveLoader className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-10" />
       )}
     </div>
   );

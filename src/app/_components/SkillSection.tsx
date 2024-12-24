@@ -50,7 +50,7 @@ export const SkillSection = () => {
           initial="hidden"
           whileInView="show"
           viewport={{ once: true }}
-          className="flex flex-col justify-start items-start z-10 w-full pb-4"
+          className="flex flex-col justify-start items-center text-center z-10 w-full pb-4"
         >
           <motion.h2
             variants={item}
@@ -68,7 +68,7 @@ export const SkillSection = () => {
             arsenal I use to fight bugs, build websites, and save the day.
           </motion.p>
         </motion.div>
-        <div className="w-full grid grid-cols-1 md:grid-cols-[1fr_1.3fr] lg:grid-cols-[1fr_1.4fr] items-center justify-center gap-10 md:gap-16">
+        <div className="w-full grid grid-cols-1 items-start justify-center">
           <motion.div
             variants={{
               initial: { opacity: 0 },
@@ -82,7 +82,7 @@ export const SkillSection = () => {
             initial="initial"
             whileInView="animate"
             viewport={{ once: true }}
-            className="flex flex-wrap gap-2 justify-start items-start"
+            className="flex flex-wrap gap-2 items-start justify-center"
           >
             {Skills.map((skill, index) => (
               <CustomLink
@@ -99,7 +99,7 @@ export const SkillSection = () => {
                     },
                   }}
                   viewport={{ once: true }}
-                  className="flex justify-center items-center text-xs md:text-sm lg:text-base gap-1 capitalize"
+                  className="flex justify-center items-center grow w-full text-xs md:text-sm lg:text-base gap-1 capitalize"
                 >
                   <div className="relative w-4 h-4 md:w-5 md:h-5">
                     <Image alt={skill.name} src={skill.image} fill />
@@ -111,7 +111,7 @@ export const SkillSection = () => {
           </motion.div>
           <div
             ref={batCaveContainer}
-            className="min-h-[20rem] md:min-h-[24rem] xl:min-h-[26rem] flex justify-center items-center overflow-hidden bg-primary"
+            className="min-h-[20rem] md:min-h-[45vh] flex justify-center items-center overflow-hidden"
           >
             {hasLoaded.current && <BatCave />}
           </div>

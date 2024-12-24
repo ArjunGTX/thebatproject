@@ -7,13 +7,21 @@ type Props = {
 
 export const BatCaveLoader: React.FC<Props> = ({ className }) => {
   return (
-    <p
+    <div
       className={cn(
-        "text-sm text-tertiary font-medium md:text-base lg:text-lg text-center",
+        "text-sm text-primary font-medium md:text-base lg:text-lg text-center flex flex-col justify-center items-center gap-1",
         className,
       )}
     >
-      Batcave is loading up...
-    </p>
+      <video
+        src="/videos/batloader.webm"
+        muted
+        loop
+        playsInline
+        autoPlay
+        className="max-w-28"
+      ></video>
+      <p className="animate-pulse">Batcave is loading up...</p>
+    </div>
   );
 };
