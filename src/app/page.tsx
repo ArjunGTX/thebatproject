@@ -19,7 +19,7 @@ export default function Home() {
     <>
       <Header />
       <NightSky />
-      <main className="flex justify-center items-center flex-col max-w-svw w-full">
+      <main className="flex justify-center items-center flex-col max-w-svw w-full gap-20 md:gap-24">
         <HeroSection />
         <WorkSection />
         <SkillSection />

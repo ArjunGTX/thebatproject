@@ -8,6 +8,7 @@ import { Skills } from "@/utils/skills";
 import { CustomLink } from "@/components/CustomLink";
 import Image from "next/image";
 import dynamic from "next/dynamic";
+import { BatCaveLoader } from "./BatCaveLoader";
 
 const container = {
   hidden: { opacity: 0, y: 100 },
@@ -26,15 +27,17 @@ const item = {
 };
 
 const BatCave = dynamic(() => import("./BatCave").then((mod) => mod.BatCave), {
-  loading: () => <>BatCave</>,
+  loading: () => <BatCaveLoader />,
 });
 
 export const SkillSection = () => {
   const batCaveContainer = useRef<HTMLDivElement>(null);
+  const hasLoaded = useRef(false);
 
   const isInView = useInView(batCaveContainer, {
-    margin: "600px 0px 600px 0px",
+    margin: "20px 0px 20px 0px",
   });
+  hasLoaded.current = hasLoaded.current || isInView;
 
   return (
     <PageSection
@@ -65,13 +68,7 @@ export const SkillSection = () => {
             arsenal I use to fight bugs, build websites, and save the day.
           </motion.p>
         </motion.div>
-        <div className="w-full grid grid-cols-1 md:grid-cols-[1.25fr_1fr] items-center justify-center gap-10 md:gap-16">
-          <div
-            ref={batCaveContainer}
-            className="min-h-[20rem] md:min-h-[24rem] xl:min-h-[26rem] flex justify-center items-center overflow-hidden"
-          >
-            {isInView && <BatCave />}
-          </div>
+        <div className="w-full grid grid-cols-1 md:grid-cols-[1fr_1.3fr] lg:grid-cols-[1fr_1.4fr] items-center justify-center gap-10 md:gap-16">
           <motion.div
             variants={{
               initial: { opacity: 0 },
@@ -112,6 +109,12 @@ export const SkillSection = () => {
               </CustomLink>
             ))}
           </motion.div>
+          <div
+            ref={batCaveContainer}
+            className="min-h-[20rem] md:min-h-[24rem] xl:min-h-[26rem] flex justify-center items-center overflow-hidden bg-primary"
+          >
+            {hasLoaded.current && <BatCave />}
+          </div>
         </div>
       </div>
     </PageSection>
