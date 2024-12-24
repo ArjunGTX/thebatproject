@@ -5,6 +5,7 @@ import React, { useEffect, useRef } from "react";
 import { GLTFLoader } from "three/examples/jsm/loaders/GLTFLoader";
 import { OrbitControls } from "three/examples/jsm/controls/OrbitControls";
 import { BatCaveLoader } from "./BatCaveLoader";
+import { CONSTANTS } from "@/utils/constants";
 
 const getCanvasDimensions = () => {
   const canvasWidth = Math.min(window.innerWidth, 1280);
@@ -57,14 +58,20 @@ export const BatCave = () => {
 
     const loader = new GLTFLoader();
 
-    loader.load("/models/batcave/scene.gltf", (glb) => {
-      const model = glb.scene;
-      model.scale.set(0.8, 0.8, 0.8);
-      model.position.set(-1, 1, 0);
-      scene.add(model);
-      setIsLoaded(true);
-    });
-
+    const initModel = () => {
+      if (sessionStorage.getItem(CONSTANTS.MODEL_CACHING) === "true") {
+        requestAnimationFrame(initModel);
+      } else {
+        loader.load("/models/batcave/scene.gltf", (gltf) => {
+          const model = gltf.scene;
+          model.scale.set(0.8, 0.8, 0.8);
+          model.position.set(-1, 1, 0);
+          scene.add(model);
+          setIsLoaded(true);
+        });
+      }
+    };
+    initModel();
     const renderer = new THREE.WebGLRenderer({
       canvas,
       antialias: true,

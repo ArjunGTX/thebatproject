@@ -1,6 +1,6 @@
 export const Constants = {
   frontendUrl: "https://iambatman.dev",
-};
+} as const;
 
 export const ExternalLinks = {
   linkedin: "https://www.linkedin.com/in/arjunvc",
@@ -17,7 +17,7 @@ export const ExternalLinks = {
   meeting: "https://cal.com/arjunvc/15min",
   resume: "",
   vicara: "https://www.vicara.co/",
-};
+} as const;
 
 export const HomePageSections = {
   main: "main",
@@ -25,4 +25,8 @@ export const HomePageSections = {
   arsenal: "arsenal",
   missions: "missions",
   about: "about",
+} as const;
+
+export const CONSTANTS = {
+  MODEL_CACHING: "MODEL_CACHING",
 } as const;
