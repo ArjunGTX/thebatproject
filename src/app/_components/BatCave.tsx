@@ -6,6 +6,7 @@ import { GLTFLoader } from "three/examples/jsm/loaders/GLTFLoader";
 import { OrbitControls } from "three/examples/jsm/controls/OrbitControls";
 import { BatCaveLoader } from "./BatCaveLoader";
 import { CONSTANTS } from "@/utils/constants";
+import { cn } from "@/styles/utils";
 
 const getCanvasDimensions = () => {
   const canvasWidth = Math.min(window.innerWidth, 1280);
@@ -82,7 +83,6 @@ export const BatCave = () => {
     const orbitControls = new OrbitControls(camera, renderer.domElement);
     orbitControls.enableDamping = true;
     orbitControls.enablePan = false;
-    orbitControls.enableZoom = false;
 
     renderer.setSize(canvasWidth, canvasHeight);
     renderer.setPixelRatio(window.devicePixelRatio);
@@ -114,6 +114,7 @@ export const BatCave = () => {
         ref={canvasRef}
         width={canvasWidth}
         height={canvasHeight}
+        className={cn(!isLoaded && "pointer-events-none")}
       ></canvas>
       {!isLoaded && (
         <BatCaveLoader className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-10" />
