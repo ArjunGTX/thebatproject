@@ -68,7 +68,7 @@ export const SkillSection = () => {
             arsenal I use to fight bugs, build websites, and save the day.
           </motion.p>
         </motion.div>
-        <div className="w-full grid grid-cols-1 items-start justify-center">
+        <div className="w-full grid grid-cols-1 items-start justify-center gap-6">
           <motion.div
             variants={{
               initial: { opacity: 0 },

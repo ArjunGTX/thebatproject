@@ -8,13 +8,13 @@ const scriptContent = `
 const cacheName = "${pkg.version}";
 const cacheLimit = 100;
 
-const ignoreEndPoints = [];
+const assetsToBeCached = ["https://models.iambatman.dev/scene.bin"];
 
-const shouldIgnoreCaching = (request) => {
+const shouldCache = (request) => {
   if (request.method !== "GET") {
-    return true;
+    return false;
   }
-  return ignoreEndPoints.some((endPoint) => request.url.startsWith(endPoint));
+  return assetsToBeCached.some((endPoint) => request.url.startsWith(endPoint));
 };
 
 const cacheClone = async (request) => {
@@ -61,7 +61,7 @@ self.addEventListener("activate", (e) => {
 });
 
 self.addEventListener("fetch", (e) => {
-  if (shouldIgnoreCaching(e.request)) {
+  if (!shouldCache(e.request)) {
     return;
   }
   e.respondWith(getCache(e.request));
