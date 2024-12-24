@@ -60,8 +60,8 @@ export const Experiences: Experience[] = [
         >
           Findr
         </CustomLink>
-        , I led full-stack development, building the entire frontend and
-        contributing to the Python FastAPI backend.
+        , I handled the frontend end-to-end and also contributed to the Python
+        FastAPI backend.
       </>
     ),
   },
