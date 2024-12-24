@@ -21,7 +21,7 @@ export const BatCaveLoader: React.FC<Props> = ({ className }) => {
         autoPlay
         className="max-w-28"
       ></video>
-      <p className="animate-pulse">Batcave is loading up...</p>
+      <small className="text-tertiary text-xs">Great things take time.</small>
     </div>
   );
 };

@@ -5,7 +5,6 @@ import React, { useEffect, useRef } from "react";
 import { GLTFLoader } from "three/examples/jsm/loaders/GLTFLoader";
 import { OrbitControls } from "three/examples/jsm/controls/OrbitControls";
 import { BatCaveLoader } from "./BatCaveLoader";
-import { CONSTANTS } from "@/utils/constants";
 import { cn } from "@/styles/utils";
 
 const getCanvasDimensions = () => {
@@ -58,21 +57,13 @@ export const BatCave = () => {
     scene.add(light5);
 
     const loader = new GLTFLoader();
-
-    const initModel = () => {
-      if (sessionStorage.getItem(CONSTANTS.MODEL_CACHING) === "true") {
-        requestAnimationFrame(initModel);
-      } else {
-        loader.load("/models/batcave/scene.gltf", (gltf) => {
-          const model = gltf.scene;
-          model.scale.set(0.8, 0.8, 0.8);
-          model.position.set(-1, 1, 0);
-          scene.add(model);
-          setIsLoaded(true);
-        });
-      }
-    };
-    initModel();
+    loader.load("/models/batcave/scene.gltf", (gltf) => {
+      const model = gltf.scene;
+      model.scale.set(0.8, 0.8, 0.8);
+      model.position.set(-1, 1, 0);
+      scene.add(model);
+      setIsLoaded(true);
+    });
     const renderer = new THREE.WebGLRenderer({
       canvas,
       antialias: true,
@@ -109,7 +100,7 @@ export const BatCave = () => {
   }, []);
 
   return (
-    <div className="w-full h-full relative ">
+    <div className="w-full h-full relative">
       <canvas
         ref={canvasRef}
         width={canvasWidth}
