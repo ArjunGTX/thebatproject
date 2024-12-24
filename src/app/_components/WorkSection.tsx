@@ -35,7 +35,7 @@ export const WorkSection = () => {
           initial="hidden"
           whileInView="show"
           viewport={{ once: true }}
-          className="flex flex-col justify-start items-start z-10 w-full pb-4"
+          className="flex flex-col justify-start items-center text-center z-10 w-full pb-4"
         >
           <motion.h2
             variants={item}
