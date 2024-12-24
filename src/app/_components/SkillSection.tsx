@@ -55,16 +55,17 @@ export const SkillSection = () => {
           </motion.p>
         </motion.div>
         <motion.div
-          initial={{
-            opacity: 0,
-          }}
-          whileInView={{
-            opacity: 1,
-            transition: {
-              duration: 1,
-              delay: 0.75,
+          variants={{
+            initial: { opacity: 0 },
+            animate: {
+              opacity: 1,
+              transition: {
+                staggerChildren: 0.09,
+              },
             },
           }}
+          initial="initial"
+          whileInView="animate"
           viewport={{ once: true }}
           className="w-full grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-16"
         >
@@ -76,12 +77,21 @@ export const SkillSection = () => {
                 target="_blank"
                 key={index}
               >
-                <div className="flex justify-center items-center text-sm lg:text-base gap-1 capitalize">
+                <motion.div
+                  variants={{
+                    initial: { opacity: 0 },
+                    animate: {
+                      opacity: 1,
+                    },
+                  }}
+                  viewport={{ once: true }}
+                  className="flex justify-center items-center text-sm lg:text-base gap-1 capitalize"
+                >
                   <div className="relative w-4 h-4 md:w-5 md:h-5">
                     <Image alt={skill.name} src={skill.image} fill />
                   </div>
                   {skill.name}
-                </div>
+                </motion.div>
               </CustomLink>
             ))}
           </div>
