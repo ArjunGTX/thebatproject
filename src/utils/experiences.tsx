@@ -1,5 +1,6 @@
 import { CustomLink } from "@/components/CustomLink";
 import { ExternalLinks } from "./constants";
+
 export type Experience = {
   title: string;
   company: string;

@@ -8,12 +8,12 @@ const NavLinks = [
     url: `/#${HomePageSections.journey}`,
   },
   {
-    name: "Missions",
-    url: `/#${HomePageSections.missions}`,
-  },
-  {
     name: "Arsenal",
     url: `/#${HomePageSections.arsenal}`,
+  },
+  {
+    name: "Missions",
+    url: `/#${HomePageSections.missions}`,
   },
   {
     name: "Unmasked",
