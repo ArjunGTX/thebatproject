@@ -40,22 +40,22 @@ export const BatCave = () => {
     camera.position.set(0, 0, 10);
     scene.add(camera);
 
-    const light1 = new THREE.AmbientLight(0xaaaaaa, 0.25);
+    const light1 = new THREE.AmbientLight(0xaaaaaa, 0.5);
     scene.add(light1);
 
-    const light2 = new THREE.DirectionalLight(0xaaaaaa, 0.75);
+    const light2 = new THREE.DirectionalLight(0xaaaaaa, 1);
     light2.position.set(0, 100, -100);
     scene.add(light2);
 
-    const light3 = new THREE.DirectionalLight(0xaaaaaa, 0.75);
+    const light3 = new THREE.DirectionalLight(0xaaaaaa, 1);
     light3.position.set(0, 0, 50);
     scene.add(light3);
 
-    const light4 = new THREE.PointLight(0xffee88, 4);
+    const light4 = new THREE.PointLight(0xffee88, 6);
     light4.position.set(-1, -1, 3);
     scene.add(light4);
 
-    const light5 = new THREE.PointLight(0xffee88, 4);
+    const light5 = new THREE.PointLight(0xffee88, 6);
     light5.position.set(3, 1, -1);
     scene.add(light5);
 
@@ -65,7 +65,7 @@ export const BatCave = () => {
       (gltf) => {
         const model = gltf.scene;
         model.scale.set(0.8, 0.8, 0.8);
-        model.position.set(-1, 1, 0);
+        model.position.set(0, 1, 0);
         scene.add(model);
         setStatus("success");
       },
@@ -111,7 +111,7 @@ export const BatCave = () => {
   }, []);
 
   return (
-    <div className="w-full h-full relative">
+    <div className="w-full h-full relative flex justify-center items-center">
       {status === "error" ? (
         <p className="text-tertiary mx-auto text-center">
           Uh oh, someone&apos;s messed with the Batcave! Alfred&apos;s on it.
@@ -122,7 +122,9 @@ export const BatCave = () => {
             ref={canvasRef}
             width={canvasWidth}
             height={canvasHeight}
-            className={cn(status !== "success" && "pointer-events-none")}
+            className={cn(
+              status !== "success" ? "pointer-events-none" : "cursor-grab",
+            )}
           ></canvas>
           {status === "loading" && (
             <BatCaveLoader className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-10" />

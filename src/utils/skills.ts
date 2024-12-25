@@ -17,12 +17,12 @@ export const Skills: Skill[] = [
   },
   {
     image: "/images/skills/react.svg",
-    name: "ReactJs",
+    name: "React.js",
     link: "https://reactjs.org/",
   },
   {
     image: "/images/skills/nextjs.svg",
-    name: "NextJs",
+    name: "Next.js",
     link: "https://nextjs.org/",
   },
   {
@@ -67,12 +67,12 @@ export const Skills: Skill[] = [
   },
   {
     image: "/images/skills/nodejs.svg",
-    name: "NodeJs",
+    name: "Node.js",
     link: "https://nodejs.org/",
   },
   {
     image: "/images/skills/threejs.svg",
-    name: "ThreeJs",
+    name: "Three.js",
     link: "https://threejs.org/",
   },
   {
@@ -82,7 +82,7 @@ export const Skills: Skill[] = [
   },
   {
     image: "/images/skills/langchain.svg",
-    name: "LangChainJs",
+    name: "LangChain.js",
     link: "https://js.langchain.com/docs/introduction/",
   },
   {
@@ -92,7 +92,7 @@ export const Skills: Skill[] = [
   },
   {
     image: "/images/skills/handlebars.svg",
-    name: "HandlebarsJs",
+    name: "Handlebars.js",
     link: "https://handlebarsjs.com/",
   },
   {

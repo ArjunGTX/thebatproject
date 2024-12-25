@@ -11,12 +11,12 @@ const SiteLinks = [
     url: `/#${HomePageSections.journey}`,
   },
   {
-    name: "Projects",
-    url: `/#${HomePageSections.missions}`,
-  },
-  {
     name: "Skills",
     url: `/#${HomePageSections.arsenal}`,
+  },
+  {
+    name: "Projects",
+    url: `/#${HomePageSections.missions}`,
   },
   {
     name: "About",
@@ -28,22 +28,22 @@ const SocialLinks: { icon: IconName; url: string; title: string }[] = [
   {
     icon: "outline/mail",
     url: ExternalLinks.email,
-    title: "Email",
+    title: "Email Arjun",
   },
   {
     icon: "outline/github",
     url: ExternalLinks.github,
-    title: "GitHub",
+    title: "Arjun's GitHub Profile",
   },
   {
     icon: "outline/linkedin",
     url: ExternalLinks.linkedin,
-    title: "LinkedIn",
+    title: "Arjun's LinkedIn Profile",
   },
   {
     icon: "outline/twitter",
     url: ExternalLinks.twitter,
-    title: "Twitter",
+    title: "Arjun's Twitter Profile",
   },
 ];
 
@@ -94,7 +94,7 @@ const ContactLinks = [
 
 export const Footer = () => {
   return (
-    <footer className="w-full flex justify-center items-start relative z-50 min-h-[50vh] snap-center">
+    <footer className="w-full flex justify-center items-start relative z-50 min-h-[50vh] snap-center mt-24 lg:mt-32">
       <div className="h-[2px] bg-[linear-gradient(to_right,#9ca3af10,#6b7280bb,#9ca3af10)] w-full absolute top-0"></div>
       <PageSection className="w-full flex justify-center items-start py-12 md:py-14 lg:py-16 xl:py-20">
         <div className="flex justify-start flex-wrap items-start gap-y-8 gap-x-24">

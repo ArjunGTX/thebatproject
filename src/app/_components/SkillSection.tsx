@@ -11,7 +11,7 @@ import dynamic from "next/dynamic";
 import { BatCaveLoader } from "./BatCaveLoader";
 import { Button } from "@/components/Button";
 
-const container = {
+const containerVariants = {
   hidden: { opacity: 0, y: 100 },
   show: {
     opacity: 1,
@@ -22,7 +22,7 @@ const container = {
   },
 };
 
-const item = {
+const childVariants = {
   hidden: { opacity: 0, y: 100 },
   show: { opacity: 1, y: 0 },
 };
@@ -39,25 +39,25 @@ export const SkillSection = () => {
   return (
     <PageSection
       id={HomePageSections.arsenal}
-      className="w-full min-h-svh overflow-x-clip "
+      className="w-full overflow-x-clip "
     >
-      <div className="w-full flex flex-col justify-start items-start mx-auto max-w-[80rem] gap-10">
+      <div className="w-full flex flex-col justify-start items-center mx-auto gap-12">
         <motion.div
-          variants={container}
+          variants={containerVariants}
           initial="hidden"
           whileInView="show"
           viewport={{ once: true }}
-          className="flex flex-col justify-start items-start z-10 w-full pb-4"
+          className="flex flex-col justify-start items-start z-10 w-full max-w-[60rem]"
         >
           <motion.h2
-            variants={item}
+            variants={childVariants}
             viewport={{ once: true }}
             className="text-4xl md:text-5xl lg:text-6xl font-bebas-neue"
           >
             Tech Arsenal
           </motion.h2>
           <motion.p
-            variants={item}
+            variants={childVariants}
             viewport={{ once: true }}
             className="text-tertiary max-w-[55ch] text-xs md:text-sm lg:text-base xl:text-lg"
           >
@@ -65,7 +65,7 @@ export const SkillSection = () => {
             arsenal I use to fight bugs, build websites, and save the day.
           </motion.p>
         </motion.div>
-        <div className="w-full grid grid-cols-1 items-start justify-center gap-6">
+        <div className="w-full grid grid-cols-1 items-start justify-center gap-12">
           <motion.div
             variants={{
               initial: { opacity: 0 },
@@ -79,7 +79,7 @@ export const SkillSection = () => {
             initial="initial"
             whileInView="animate"
             viewport={{ once: true }}
-            className="flex flex-wrap gap-2 items-start justify-start"
+            className="flex flex-wrap gap-2 items-start justify-start max-w-[60rem] w-full mx-auto"
           >
             {Skills.map((skill, index) => (
               <CustomLink
@@ -99,7 +99,7 @@ export const SkillSection = () => {
                   className="flex justify-center items-center grow w-full text-xs md:text-sm lg:text-base gap-1 capitalize"
                 >
                   <div className="relative w-4 h-4 md:w-5 md:h-5">
-                    <Image alt={skill.name} src={skill.image} fill />
+                    <Image alt="" src={skill.image} fill />
                   </div>
                   {skill.name}
                 </motion.div>
@@ -108,12 +108,12 @@ export const SkillSection = () => {
           </motion.div>
           <div
             ref={batCaveContainer}
-            className="min-h-[20rem] md:min-h-[45vh] flex justify-center items-center overflow-hidden"
+            className="min-h-[20rem] md:min-h-[45vh] max-h-[86vh] flex justify-center items-center overflow-hidden"
           >
             {showBatCave ? (
               <BatCave />
             ) : (
-              <div className="flex flex-col mt-16 justify-center items-center gap-2 rounded-md overflow-hidden w-full max-w-[65rem] aspect-[1.89/1] relative">
+              <div className="flex flex-col mt-16 justify-center items-center gap-2 rounded-md overflow-hidden w-full max-w-[65rem] aspect-[1.90/1] relative">
                 <Image
                   alt="Preview of the batcave"
                   src="/images/misc/batcave.webp"
@@ -126,7 +126,7 @@ export const SkillSection = () => {
                   >
                     Enter the BatCave
                   </Button>
-                  <p className="text-tertiary text-xs md:text-sm">
+                  <p className="text-tertiary text-xs md:text-sm text-center text-balance">
                     This experience involves downloading a 100MB 3D model.
                   </p>
                 </div>

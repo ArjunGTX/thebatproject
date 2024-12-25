@@ -11,7 +11,7 @@ type Props = {
   experience: Experience;
 };
 
-const container = {
+const containerVariants = {
   hidden: { opacity: 0, y: 100 },
   show: {
     opacity: 1,
@@ -22,7 +22,7 @@ const container = {
   },
 };
 
-const item = {
+const childVariants = {
   hidden: { opacity: 0, y: 100 },
   show: { opacity: 1, y: 0 },
 };
@@ -30,21 +30,21 @@ const item = {
 export const ExperienceCard: React.FC<Props> = ({ experience }) => {
   return (
     <motion.div
-      variants={container}
+      variants={containerVariants}
       viewport={{ once: true }}
       initial="hidden"
       whileInView="show"
-      className="flex flex-col justify-start items-start"
+      className="flex flex-col justify-start items-start max-w-[52rem] w-full"
     >
       <motion.h3
         viewport={{ once: true }}
-        variants={item}
-        className="text-xl lg:text-2xl xl:text-3xl mb-1 uppercase"
+        variants={childVariants}
+        className="text-xl lg:text-2xl xl:text-3xl mb-1 text-secondary"
       >
         {experience.title}
       </motion.h3>
       <motion.p
-        variants={item}
+        variants={childVariants}
         viewport={{ once: true }}
         className="flex text-xs lg:text-base text-secondary justify-start items-center"
       >
@@ -60,12 +60,12 @@ export const ExperienceCard: React.FC<Props> = ({ experience }) => {
       <CustomLink
         href={experience.imageLink}
         target="_blank"
-        className="w-full md:w-3/4 xl:w-[80%] my-4"
+        className="w-full my-4"
       >
         <motion.div
-          variants={item}
+          variants={childVariants}
           viewport={{ once: true }}
-          className="relative overflow-hidden rounded-lg aspect-[2.2/1] w-full"
+          className="relative overflow-hidden rounded-lg aspect-[1.9/1] w-full"
         >
           <Image
             className="object-cover"
@@ -76,9 +76,9 @@ export const ExperienceCard: React.FC<Props> = ({ experience }) => {
         </motion.div>
       </CustomLink>
       <motion.p
-        variants={item}
+        variants={childVariants}
         viewport={{ once: true }}
-        className="text-xs md:text-sm lg:text-lg xl:text-xl text-secondary font-medium"
+        className="text-xs md:text-sm lg:text-lg xl:text-xl text-secondary font-medium mt-1 text-pretty"
       >
         {experience.subheading}
       </motion.p>

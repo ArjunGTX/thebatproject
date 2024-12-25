@@ -67,14 +67,14 @@ export const ExperienceDescription: React.FC<Props> = ({
       viewport={{
         once: true,
       }}
-      className="text-tertiary text-xs md:text-sm lg:text-base min-h-[12lh] leading-normal"
+      className="text-tertiary text-xs md:text-sm lg:text-base min-h-[12lh] lg:min-h-[6lh] leading-normal"
     >
       {description}
     </motion.p>
   ) : (
     <motion.p
       ref={descriptionRef}
-      className="text-tertiary text-xs md:text-sm lg:text-base min-h-[12lh] leading-normal"
+      className="text-tertiary text-xs md:text-sm lg:text-base min-h-[12lh] lg:min-h-[6lh] leading-normal"
     >
       {displayText}
     </motion.p>
