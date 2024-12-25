@@ -28,22 +28,22 @@ const SocialLinks: { icon: IconName; url: string; title: string }[] = [
   {
     icon: "outline/mail",
     url: ExternalLinks.email,
-    title: "Email",
+    title: "Email Arjun",
   },
   {
     icon: "outline/github",
     url: ExternalLinks.github,
-    title: "GitHub",
+    title: "Arjun's GitHub Profile",
   },
   {
     icon: "outline/linkedin",
     url: ExternalLinks.linkedin,
-    title: "LinkedIn",
+    title: "Arjun's LinkedIn Profile",
   },
   {
     icon: "outline/twitter",
     url: ExternalLinks.twitter,
-    title: "Twitter",
+    title: "Arjun's Twitter Profile",
   },
 ];
 
