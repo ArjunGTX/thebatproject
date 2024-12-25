@@ -22,9 +22,6 @@ const childVariants = {
 };
 
 export const AboutSection = () => {
-  const dob = 2002;
-  const age = new Date().getFullYear() - dob;
-
   return (
     <PageSection
       id={HomePageSections.about}
@@ -83,11 +80,11 @@ export const AboutSection = () => {
                 }}
                 viewport={{ once: true }}
               >
-                I am Arjun, a {age}-year-old developer based in Kerala, India.
-                For three years, I&apos;ve been working in the shadows, honing
-                my craft as a frontend developer at two product-based startups.
-                Each project, a mission; each line of code, a tool in my
-                arsenal.
+                I am Arjun, a frontend developer who has spent the last three
+                years working in the shadows of two product-based startups,
+                perfecting the art of crafting seamless and impactful user
+                experiences. Each project has been a mission, every line of code
+                a step toward creating something meaningful.
               </motion.p>
               <motion.p
                 variants={{
