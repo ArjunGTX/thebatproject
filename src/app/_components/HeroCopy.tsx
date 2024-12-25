@@ -5,7 +5,7 @@ import { CustomLink } from "@/components/CustomLink";
 import { ExternalLinks } from "@/utils/constants";
 import { motion } from "framer-motion";
 
-const container = {
+const containerVariants = {
   hidden: { opacity: 0 },
   show: {
     opacity: 1,
@@ -17,7 +17,7 @@ const container = {
   },
 };
 
-const item = {
+const childVariants = {
   hidden: { opacity: 0 },
   show: { opacity: 1 },
 };
@@ -25,19 +25,19 @@ const item = {
 export const HeroCopy = () => {
   return (
     <motion.div
-      variants={container}
+      variants={containerVariants}
       initial="hidden"
       animate="show"
       className="flex flex-col justify-start gap-6 md:gap-8 items-center text-center order-1 self-start lg:self-center lg:-order-1 lg:text-left lg:items-start"
     >
       <motion.h1
-        variants={item}
+        variants={childVariants}
         className="text-5xl text-primary xs:text-6xl font-bebas-neue sm:text-7xl lg:text-9xl xl:text-10xl leading-none font-bold tracking-normal lg:tracking-[0.015em]"
       >
         Developer by day, <br /> Vigilante by night
       </motion.h1>
       <motion.p
-        variants={item}
+        variants={childVariants}
         className="text-base text-secondary sm:text-lg xl:text-xl leading-snug"
       >
         <i>
@@ -47,7 +47,7 @@ export const HeroCopy = () => {
         </i>
       </motion.p>
       <motion.div
-        variants={item}
+        variants={childVariants}
         className="flex justify-center flex-wrap items-center gap-4"
       >
         <CustomLink

@@ -122,7 +122,9 @@ export const BatCave = () => {
             ref={canvasRef}
             width={canvasWidth}
             height={canvasHeight}
-            className={cn(status !== "success" && "pointer-events-none")}
+            className={cn(
+              status !== "success" ? "pointer-events-none" : "cursor-grab",
+            )}
           ></canvas>
           {status === "loading" && (
             <BatCaveLoader className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-10" />

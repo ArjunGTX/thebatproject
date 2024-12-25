@@ -11,7 +11,7 @@ import dynamic from "next/dynamic";
 import { BatCaveLoader } from "./BatCaveLoader";
 import { Button } from "@/components/Button";
 
-const container = {
+const containerVariants = {
   hidden: { opacity: 0, y: 100 },
   show: {
     opacity: 1,
@@ -22,7 +22,7 @@ const container = {
   },
 };
 
-const item = {
+const childVariants = {
   hidden: { opacity: 0, y: 100 },
   show: { opacity: 1, y: 0 },
 };
@@ -43,21 +43,21 @@ export const SkillSection = () => {
     >
       <div className="w-full flex flex-col justify-start items-start mx-auto max-w-[80rem] gap-10">
         <motion.div
-          variants={container}
+          variants={containerVariants}
           initial="hidden"
           whileInView="show"
           viewport={{ once: true }}
           className="flex flex-col justify-start items-start z-10 w-full pb-4"
         >
           <motion.h2
-            variants={item}
+            variants={childVariants}
             viewport={{ once: true }}
             className="text-4xl md:text-5xl lg:text-6xl font-bebas-neue"
           >
             Tech Arsenal
           </motion.h2>
           <motion.p
-            variants={item}
+            variants={childVariants}
             viewport={{ once: true }}
             className="text-tertiary max-w-[55ch] text-xs md:text-sm lg:text-base xl:text-lg"
           >
