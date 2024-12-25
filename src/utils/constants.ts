@@ -1,5 +1,6 @@
 export const Constants = {
   frontendUrl: "https://iambatman.dev",
+  primaryCtaId: "primary-cta",
 } as const;
 
 export const ExternalLinks = {

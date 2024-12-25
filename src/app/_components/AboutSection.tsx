@@ -58,7 +58,7 @@ export const AboutSection = () => {
             }}
             initial="hidden"
             whileInView="show"
-            transition={{ staggerChildren: 0.2, delay: 0.75, duration: 1 }}
+            transition={{ staggerChildren: 0.2, delay: 0.5, duration: 0.75 }}
             viewport={{ once: true }}
             className="flex flex-col md:flex-row justify-start items-start gap-6 md:gap-16"
           >

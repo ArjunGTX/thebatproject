@@ -2,7 +2,7 @@
 
 import React from "react";
 import { CustomLink } from "@/components/CustomLink";
-import { ExternalLinks } from "@/utils/constants";
+import { Constants, ExternalLinks } from "@/utils/constants";
 import { motion } from "framer-motion";
 
 const containerVariants = {
@@ -52,6 +52,7 @@ export const HeroCopy = () => {
       >
         <CustomLink
           variant="primary"
+          id={Constants.primaryCtaId}
           className="flex text-sm md:text-base flex-col justify-center items-center group w-full md:w-64"
           href={ExternalLinks.meeting}
           target="_blank"
