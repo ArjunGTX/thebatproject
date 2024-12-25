@@ -27,9 +27,9 @@ export const WorkSection = () => {
   return (
     <PageSection
       id={HomePageSections.journey}
-      className="w-full snap-center min-h-svh overflow-x-clip"
+      className="w-full overflow-x-clip"
     >
-      <div className="w-full flex flex-col justify-start items-start gap-10 lg:gap-[5vh] xl:gap-[6vh] max-w-[80rem] mx-auto">
+      <div className="w-full flex flex-col justify-start items-start gap-16 max-w-[60rem] mx-auto">
         <motion.div
           variants={containerVariants}
           initial="hidden"
@@ -54,11 +54,9 @@ export const WorkSection = () => {
             world.
           </motion.p>
         </motion.div>
-        <div className="w-full grid grid-cols-1 md:grid-cols-2 gap-20 md:gap-16 lg:gap-24">
-          {Experiences.map((experience, index) => (
-            <ExperienceCard experience={experience} key={index} />
-          ))}
-        </div>
+        {Experiences.map((experience, index) => (
+          <ExperienceCard experience={experience} key={index} />
+        ))}
       </div>
     </PageSection>
   );

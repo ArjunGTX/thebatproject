@@ -35,7 +35,7 @@ export const Experiences: Experience[] = [
         >
           Patr
         </CustomLink>
-        , <br /> modernizing its architecture.
+        , modernizing its architecture.
       </>
     ),
   },
@@ -60,7 +60,7 @@ export const Experiences: Experience[] = [
         >
           Findr
         </CustomLink>
-        , I handled the frontend end-to-end and also contributed to the Python
+        , I handled the frontend end-to-end, and also contributed to the Python
         FastAPI backend.
       </>
     ),

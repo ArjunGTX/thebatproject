@@ -65,7 +65,7 @@ export const BatCave = () => {
       (gltf) => {
         const model = gltf.scene;
         model.scale.set(0.8, 0.8, 0.8);
-        model.position.set(-1, 1, 0);
+        model.position.set(0, 1, 0);
         scene.add(model);
         setStatus("success");
       },
@@ -111,7 +111,7 @@ export const BatCave = () => {
   }, []);
 
   return (
-    <div className="w-full h-full relative">
+    <div className="w-full h-full relative flex justify-center items-center">
       {status === "error" ? (
         <p className="text-tertiary mx-auto text-center">
           Uh oh, someone&apos;s messed with the Batcave! Alfred&apos;s on it.

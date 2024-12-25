@@ -39,15 +39,15 @@ export const SkillSection = () => {
   return (
     <PageSection
       id={HomePageSections.arsenal}
-      className="w-full min-h-svh overflow-x-clip "
+      className="w-full overflow-x-clip "
     >
-      <div className="w-full flex flex-col justify-start items-start mx-auto max-w-[80rem] gap-10">
+      <div className="w-full flex flex-col justify-start items-center mx-auto gap-16">
         <motion.div
           variants={containerVariants}
           initial="hidden"
           whileInView="show"
           viewport={{ once: true }}
-          className="flex flex-col justify-start items-start z-10 w-full pb-4"
+          className="flex flex-col justify-start items-start z-10 w-full pb-4 max-w-[60rem]"
         >
           <motion.h2
             variants={childVariants}
@@ -65,7 +65,7 @@ export const SkillSection = () => {
             arsenal I use to fight bugs, build websites, and save the day.
           </motion.p>
         </motion.div>
-        <div className="w-full grid grid-cols-1 items-start justify-center gap-6">
+        <div className="w-full grid grid-cols-1 items-start justify-center gap-16">
           <motion.div
             variants={{
               initial: { opacity: 0 },
@@ -79,7 +79,7 @@ export const SkillSection = () => {
             initial="initial"
             whileInView="animate"
             viewport={{ once: true }}
-            className="flex flex-wrap gap-2 items-start justify-start"
+            className="flex flex-wrap gap-2 items-start justify-start max-w-[60rem] w-full mx-auto"
           >
             {Skills.map((skill, index) => (
               <CustomLink
@@ -108,7 +108,7 @@ export const SkillSection = () => {
           </motion.div>
           <div
             ref={batCaveContainer}
-            className="min-h-[20rem] md:min-h-[45vh] flex justify-center items-center overflow-hidden"
+            className="min-h-[20rem] md:min-h-[45vh] max-h-[86vh] flex justify-center items-center overflow-hidden"
           >
             {showBatCave ? (
               <BatCave />
@@ -126,7 +126,7 @@ export const SkillSection = () => {
                   >
                     Enter the BatCave
                   </Button>
-                  <p className="text-tertiary text-xs md:text-sm">
+                  <p className="text-tertiary text-xs md:text-sm text-center text-balance">
                     This experience involves downloading a 100MB 3D model.
                   </p>
                 </div>

@@ -23,11 +23,8 @@ const childVariants = {
 
 export const AboutSection = () => {
   return (
-    <PageSection
-      id={HomePageSections.about}
-      className="w-full snap-center min-h-svh overflow-x-clip"
-    >
-      <div className="w-full flex flex-col justify-start items-start gap-10 lg:gap-[5vh] xl:gap-[6vh] max-w-[80rem] mx-auto">
+    <PageSection id={HomePageSections.about} className="w-full overflow-x-clip">
+      <div className="w-full flex flex-col justify-start items-start gap-10 lg:gap-[5vh] xl:gap-[6vh] max-w-[60rem] mx-auto">
         <motion.div
           variants={containerVariants}
           initial="hidden"
@@ -62,7 +59,7 @@ export const AboutSection = () => {
             whileInView="show"
             transition={{ staggerChildren: 0.2, delay: 0.75, duration: 1 }}
             viewport={{ once: true }}
-            className="flex flex-col justify-start items-start gap-6"
+            className="flex flex-col md:flex-row justify-start items-start md:items-center gap-6 md:gap-16"
           >
             <motion.div
               variants={{
@@ -70,9 +67,9 @@ export const AboutSection = () => {
                 show: { opacity: 1 },
               }}
               viewport={{ once: true }}
-              className="min-w-20 min-h-20 md:min-w-24 md:min-h-24 rounded-full bg-surface/10 border-stroke border border-solid"
+              className="min-w-60 min-h-60 md:min-w-72 md:min-h-72 rounded-3xl bg-surface/10 border-stroke border border-solid"
             ></motion.div>
-            <div className="flex flex-col justify-start items-start max-w-[50ch] gap-3 text-tertiary text-sm md:text-base md:gap-4">
+            <div className="flex flex-col justify-start items-start gap-3 max-w-[50ch] text-tertiary text-sm md:text-base md:gap-4">
               <motion.p
                 variants={{
                   hidden: { opacity: 0 },
