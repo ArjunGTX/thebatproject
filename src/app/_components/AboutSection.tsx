@@ -2,8 +2,9 @@
 
 import React from "react";
 import { PageSection } from "./PageSection";
-import { HomePageSections } from "@/utils/constants";
+import { ExternalLinks, HomePageSections } from "@/utils/constants";
 import { motion } from "framer-motion";
+import { CustomLink } from "@/components/CustomLink";
 
 const containerVariants = {
   hidden: { opacity: 0, y: 100 },
@@ -59,7 +60,7 @@ export const AboutSection = () => {
             whileInView="show"
             transition={{ staggerChildren: 0.2, delay: 0.75, duration: 1 }}
             viewport={{ once: true }}
-            className="flex flex-col md:flex-row justify-start items-start md:items-center gap-6 md:gap-16"
+            className="flex flex-col md:flex-row justify-start items-start gap-6 md:gap-16"
           >
             <motion.div
               variants={{
@@ -67,9 +68,9 @@ export const AboutSection = () => {
                 show: { opacity: 1 },
               }}
               viewport={{ once: true }}
-              className="min-w-60 min-h-60 md:min-w-72 md:min-h-72 rounded-3xl bg-surface/10 border-stroke border border-solid"
+              className="w-full md:max-w-[15.75rem] aspect-square rounded-3xl bg-surface/10 border-stroke border border-solid"
             ></motion.div>
-            <div className="flex flex-col justify-start items-start gap-3 max-w-[50ch] text-tertiary text-sm md:text-base md:gap-4">
+            <div className="flex flex-col justify-start items-start gap-3 max-w-[55ch] text-tertiary text-sm md:text-base">
               <motion.p
                 variants={{
                   hidden: { opacity: 0 },
@@ -107,6 +108,31 @@ export const AboutSection = () => {
                 app at a time, I aim to make the online world better, stronger,
                 and open to all.
               </motion.p>
+              <motion.div
+                variants={{
+                  hidden: { opacity: 0 },
+                  show: { opacity: 1 },
+                }}
+                viewport={{ once: true }}
+                className="flex justify-start w-full items-center gap-2 flex-col md:flex-row"
+              >
+                <CustomLink
+                  href={ExternalLinks.meeting}
+                  target="_blank"
+                  variant="primary"
+                  className="mt-2 w-full md:w-auto"
+                >
+                  Schedule a Call
+                </CustomLink>
+                <CustomLink
+                  href={ExternalLinks.resume}
+                  target="_blank"
+                  variant="primary"
+                  className="mt-2 w-full md:w-auto"
+                >
+                  Download Resume
+                </CustomLink>
+              </motion.div>
             </div>
           </motion.div>
         </div>
