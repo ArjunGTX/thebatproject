@@ -40,22 +40,22 @@ export const BatCave = () => {
     camera.position.set(0, 0, 10);
     scene.add(camera);
 
-    const light1 = new THREE.AmbientLight(0xaaaaaa, 0.25);
+    const light1 = new THREE.AmbientLight(0xaaaaaa, 0.5);
     scene.add(light1);
 
-    const light2 = new THREE.DirectionalLight(0xaaaaaa, 0.75);
+    const light2 = new THREE.DirectionalLight(0xaaaaaa, 1);
     light2.position.set(0, 100, -100);
     scene.add(light2);
 
-    const light3 = new THREE.DirectionalLight(0xaaaaaa, 0.75);
+    const light3 = new THREE.DirectionalLight(0xaaaaaa, 1);
     light3.position.set(0, 0, 50);
     scene.add(light3);
 
-    const light4 = new THREE.PointLight(0xffee88, 4);
+    const light4 = new THREE.PointLight(0xffee88, 6);
     light4.position.set(-1, -1, 3);
     scene.add(light4);
 
-    const light5 = new THREE.PointLight(0xffee88, 4);
+    const light5 = new THREE.PointLight(0xffee88, 6);
     light5.position.set(3, 1, -1);
     scene.add(light5);
 
