@@ -29,13 +29,13 @@ export const WorkSection = () => {
       id={HomePageSections.journey}
       className="w-full overflow-x-clip"
     >
-      <div className="w-full flex flex-col justify-start items-start gap-16 max-w-[60rem] mx-auto">
+      <div className="w-full flex flex-col justify-start items-start gap-12 max-w-[60rem] mx-auto">
         <motion.div
           variants={containerVariants}
           initial="hidden"
           whileInView="show"
           viewport={{ once: true }}
-          className="flex flex-col justify-start items-start z-10 w-full pb-4"
+          className="flex flex-col justify-start items-start z-10 w-full"
         >
           <motion.h2
             variants={childVariants}

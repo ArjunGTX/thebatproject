@@ -25,13 +25,13 @@ const childVariants = {
 export const AboutSection = () => {
   return (
     <PageSection id={HomePageSections.about} className="w-full overflow-x-clip">
-      <div className="w-full flex flex-col justify-start items-start gap-10 lg:gap-[5vh] xl:gap-[6vh] max-w-[60rem] mx-auto">
+      <div className="w-full flex flex-col justify-start items-start gap-12 max-w-[60rem] mx-auto">
         <motion.div
           variants={containerVariants}
           initial="hidden"
           whileInView="show"
           viewport={{ once: true }}
-          className="flex flex-col justify-start items-start z-10 w-full pb-4"
+          className="flex flex-col justify-start items-start z-10 w-full"
         >
           <motion.h2
             variants={childVariants}
@@ -50,7 +50,7 @@ export const AboutSection = () => {
             can be everlasting.
           </motion.p>
         </motion.div>
-        <div className="w-full grid grid-cols-1 gap-10 ">
+        <div className="w-full grid grid-cols-1 gap-10">
           <motion.div
             variants={{
               hidden: { opacity: 0 },
@@ -114,13 +114,13 @@ export const AboutSection = () => {
                   show: { opacity: 1 },
                 }}
                 viewport={{ once: true }}
-                className="flex justify-start w-full items-center gap-2 flex-col md:flex-row"
+                className="flex justify-start w-full items-center gap-2 mt-4 flex-col md:flex-row"
               >
                 <CustomLink
                   href={ExternalLinks.meeting}
                   target="_blank"
                   variant="primary"
-                  className="mt-2 w-full md:w-auto"
+                  className="w-full md:w-auto"
                 >
                   Schedule a Call
                 </CustomLink>
@@ -128,7 +128,7 @@ export const AboutSection = () => {
                   href={ExternalLinks.resume}
                   target="_blank"
                   variant="primary"
-                  className="mt-2 w-full md:w-auto"
+                  className="w-full md:w-auto"
                 >
                   Download Resume
                 </CustomLink>

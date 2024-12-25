@@ -41,13 +41,13 @@ export const SkillSection = () => {
       id={HomePageSections.arsenal}
       className="w-full overflow-x-clip "
     >
-      <div className="w-full flex flex-col justify-start items-center mx-auto gap-16">
+      <div className="w-full flex flex-col justify-start items-center mx-auto gap-12">
         <motion.div
           variants={containerVariants}
           initial="hidden"
           whileInView="show"
           viewport={{ once: true }}
-          className="flex flex-col justify-start items-start z-10 w-full pb-4 max-w-[60rem]"
+          className="flex flex-col justify-start items-start z-10 w-full max-w-[60rem]"
         >
           <motion.h2
             variants={childVariants}
@@ -65,7 +65,7 @@ export const SkillSection = () => {
             arsenal I use to fight bugs, build websites, and save the day.
           </motion.p>
         </motion.div>
-        <div className="w-full grid grid-cols-1 items-start justify-center gap-16">
+        <div className="w-full grid grid-cols-1 items-start justify-center gap-12">
           <motion.div
             variants={{
               initial: { opacity: 0 },

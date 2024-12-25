@@ -78,7 +78,7 @@ export const ExperienceCard: React.FC<Props> = ({ experience }) => {
       <motion.p
         variants={childVariants}
         viewport={{ once: true }}
-        className="text-xs md:text-sm lg:text-lg xl:text-xl text-secondary font-medium mt-4 text-pretty"
+        className="text-xs md:text-sm lg:text-lg xl:text-xl text-secondary font-medium mt-1 text-pretty"
       >
         {experience.subheading}
       </motion.p>

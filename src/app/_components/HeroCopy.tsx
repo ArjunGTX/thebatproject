@@ -28,7 +28,7 @@ export const HeroCopy = () => {
       variants={containerVariants}
       initial="hidden"
       animate="show"
-      className="flex flex-col justify-start gap-6 md:gap-8 items-center text-center order-1 self-start lg:self-center lg:-order-1 lg:text-left lg:items-start"
+      className="flex flex-col justify-start gap-6 md:gap-8 items-start order-1 self-start lg:self-center lg:-order-1 lg:text-left lg:items-start"
     >
       <motion.h1
         variants={childVariants}
@@ -52,7 +52,7 @@ export const HeroCopy = () => {
       >
         <CustomLink
           variant="primary"
-          className="flex text-sm md:text-base flex-col justify-center items-center group w-64"
+          className="flex text-sm md:text-base flex-col justify-center items-center group w-full md:w-64"
           href={ExternalLinks.meeting}
           target="_blank"
         >
@@ -61,7 +61,7 @@ export const HeroCopy = () => {
         </CustomLink>
         <CustomLink
           variant="primary"
-          className="flex flex-col text-sm md:text-base justify-center items-center group w-64"
+          className="flex flex-col text-sm md:text-base justify-center items-center group w-full md:w-64"
           href={ExternalLinks.resume}
           target="_blank"
         >
