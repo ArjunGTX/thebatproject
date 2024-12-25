@@ -99,7 +99,7 @@ export const SkillSection = () => {
                   className="flex justify-center items-center grow w-full text-xs md:text-sm lg:text-base gap-1 capitalize"
                 >
                   <div className="relative w-4 h-4 md:w-5 md:h-5">
-                    <Image alt={skill.name} src={skill.image} fill />
+                    <Image alt="" src={skill.image} fill />
                   </div>
                   {skill.name}
                 </motion.div>
@@ -113,7 +113,7 @@ export const SkillSection = () => {
             {showBatCave ? (
               <BatCave />
             ) : (
-              <div className="flex flex-col mt-16 justify-center items-center gap-2 rounded-md overflow-hidden w-full max-w-[65rem] aspect-[1.89/1] relative">
+              <div className="flex flex-col mt-16 justify-center items-center gap-2 rounded-md overflow-hidden w-full max-w-[65rem] aspect-[1.90/1] relative">
                 <Image
                   alt="Preview of the batcave"
                   src="/images/misc/batcave.webp"
