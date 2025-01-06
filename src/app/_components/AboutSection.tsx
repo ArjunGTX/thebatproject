@@ -71,7 +71,11 @@ export const AboutSection = () => {
               viewport={{ once: true }}
               className="w-full max-w-40 md:max-w-[15.75rem] relative aspect-square overflow-hidden rounded-3xl bg-surface/10 border-stroke border border-solid"
             >
-              <Image alt="Close up of " src="/images/misc/profile.webp" fill />
+              <Image
+                alt="Batman's emblem"
+                src="/images/misc/profile.webp"
+                fill
+              />
             </motion.div>
             <div className="flex flex-col justify-start items-start gap-3 max-w-[55ch] text-tertiary text-sm md:text-base">
               <motion.p
