@@ -23,7 +23,7 @@ export const BatLogo = () => {
         });
         setHasInitialized(true);
       } catch (err) {
-        console.log(err);
+        return err;
         // TODO log error here
       }
     })();

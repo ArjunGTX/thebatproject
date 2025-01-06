@@ -1,36 +1,112 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# The Bat Project
+
+This is my portfolio website built using Next.js, Tailwind CSS, and TypeScript. It uses Framer Motion for animations and contains a 3D model rendered using Three.js.
+
+## Features
+
+- **Animations**: Smooth animations powered by Framer Motion.
+- **3D Model**: Interactive 3D model rendered using Three.js.
+- **Image Optimization**: Scripts for optimizing images.
+- **Custom Icon Library**: Includes a custom icon library.
+- **Service Worker**: Script to generate a service worker.
+- **CI/CD Pipeline**: Setup using GitHub Actions and Cloudflare Wrangler CLI.
+- **Docker Deployment**: Can be deployed anywhere using Docker.
+- **Accessibility**: Highly accessible and responsive design.
 
 ## Getting Started
 
-First, run the development server:
+### Prerequisites
 
-```bash
+- Node.js
+- npm or yarn
+- Docker (optional, for containerized deployment)
+
+### Installation
+
+1. Clone the repository:
+
+```sh
+git clone https://github.com/yourusername/thebatproject.git
+cd thebatproject
+```
+
+1. Install dependencies:
+
+```sh
+npm install
+# or
+yarn install
+```
+
+### Development
+
+To start the development server:
+
+```sh
 npm run dev
 # or
 yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### Build
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+To build the project:
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```sh
+npm run build
+# or
+yarn build
+```
 
-## Learn More
+### Lint
 
-To learn more about Next.js, take a look at the following resources:
+To lint the project:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+```sh
+npm run lint
+# or
+yarn lint
+```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+### Format
 
-## Deploy on Vercel
+To format the code:
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+```sh
+npm run pretty
+# or
+yarn pretty
+```
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+### Image Optimization
+
+To optimize images:
+
+```sh
+npm run minify:images
+# or
+yarn minify:images
+```
+
+### Generate Service Worker
+
+To generate the service worker:
+
+```sh
+npm run generate:sw
+# or
+yarn generate:sw
+```
+
+### CI/CD Pipeline
+
+This project uses GitHub Actions for CI/CD and Cloudflare Wrangler CLI for deployment.
+
+### Docker Deployment
+
+To build and run the Docker container:
+
+```sh
+docker build -t thebatproject .
+docker run -p 3000:3000 thebatproject
+```
