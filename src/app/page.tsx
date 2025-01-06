@@ -5,6 +5,7 @@ import { Footer } from "@/components/Footer";
 import { WorkSection } from "./_components/WorkSection";
 import { SkillSection } from "./_components/SkillSection";
 import { AboutSection } from "./_components/AboutSection";
+import { ProjectsSection } from "./_components/ProjectsSection";
 
 const NightSky = dynamic(
   () => import("./_components/NightSky").then((module) => module.NightSky),
@@ -24,6 +25,7 @@ export default function Home() {
         <HeroSection />
         <WorkSection />
         <SkillSection />
+        <ProjectsSection />
         <AboutSection />
       </main>
       <Footer />
