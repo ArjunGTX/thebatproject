@@ -5,6 +5,7 @@ import { PageSection } from "./PageSection";
 import { ExternalLinks, HomePageSections } from "@/utils/constants";
 import { motion } from "framer-motion";
 import { CustomLink } from "@/components/CustomLink";
+import Image from "next/image";
 
 const containerVariants = {
   hidden: { opacity: 0, y: 100 },
@@ -68,8 +69,10 @@ export const AboutSection = () => {
                 show: { opacity: 1 },
               }}
               viewport={{ once: true }}
-              className="w-full md:max-w-[15.75rem] aspect-square rounded-3xl bg-surface/10 border-stroke border border-solid"
-            ></motion.div>
+              className="w-full max-w-40 md:max-w-[15.75rem] relative aspect-square overflow-hidden rounded-3xl bg-surface/10 border-stroke border border-solid"
+            >
+              <Image alt="Close up of " src="/images/misc/profile.webp" fill />
+            </motion.div>
             <div className="flex flex-col justify-start items-start gap-3 max-w-[55ch] text-tertiary text-sm md:text-base">
               <motion.p
                 variants={{
