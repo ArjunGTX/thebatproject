@@ -16,7 +16,7 @@ export const ExternalLinks = {
   prestoUi: "https://prestoui.iambatman.dev",
   phone: "tel:+918921404559",
   meeting: "https://cal.com/arjunvc/15min",
-  resume: "",
+  resume: "https://drive.google.com/file/d/1AuAYQVRI1FJGF9OnkQScf3cTy8nydIcS/view?usp=sharing",
   vicara: "https://www.vicara.co/",
 } as const;
 
