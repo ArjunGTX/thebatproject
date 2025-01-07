@@ -21,8 +21,8 @@ export const ExperienceDescription: React.FC<Props> = ({
 }) => {
   const descriptionRef = useRef<HTMLParagraphElement>(null);
 
-  const duration = 4;
-  const delay = 0.75 + duration * index;
+  const duration = 3;
+  const delay = 0.5 + duration * index;
 
   const count = useMotionValue(0);
   const rounded = useTransform(count, (latest) => Math.round(latest));
