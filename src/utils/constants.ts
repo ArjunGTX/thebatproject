@@ -17,7 +17,7 @@ export const ExternalLinks = {
   phone: "tel:+918921404559",
   meeting: "https://cal.com/arjunvc/15min",
   resume:
-    "https://drive.google.com/file/d/16fzb8EWPspCGrYyeC6xUDO9A8ZVx7rTO/view?usp=sharing",
+    "https://drive.google.com/file/d/1JkGcI5Diqm3cndoIFbggnabp1Fwgohew/view?usp=sharing",
   vicara: "https://www.vicara.co/",
 } as const;
 
