@@ -25,7 +25,10 @@ const childVariants = {
 
 export const ProjectsSection = () => {
   return (
-    <PageSection id={HomePageSections.about} className="w-full overflow-x-clip">
+    <PageSection
+      id={HomePageSections.missions}
+      className="w-full overflow-x-clip"
+    >
       <div className="w-full flex flex-col justify-start items-start gap-12 max-w-[60rem] mx-auto">
         <motion.div
           variants={containerVariants}
